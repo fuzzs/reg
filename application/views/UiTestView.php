@@ -12,6 +12,7 @@
         <link rel="/css/humanity/jquery-ui-1.9.2.custom.css">
         <script src="/js/jquery-1.8.3.js"></script>
         <script src="/js/jquery-ui-1.9.2.custom.js"></script>
+        <script src="/js/artselector.class.js"></script>
         <style>
             .selectBox {
                 position: absolute;
@@ -26,15 +27,40 @@
             }
             
             .selection {
-                background-color: #9999ff;
+                background-color: #86b3df;
                 color: #ffffff;
+            }
+            
+            .selectHandle
+            {
+                width: 1px;
+                height: 30px;
+                border: #0066cc solid 1px;
+                background-color: #0066cc;
+            }
+            
+            .selectHandleCircle
+            {
+                position: relative;
+                left: -4px;
+                background: #0066cc;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border-color: #6aa0d6;
+                border-width: 5px
             }
             
         </style>
     </head>
     <script>
+        
+        
+        
         $(function()
         {
+            //lastLetterPosition = artSelector.getLastLetterPosition();
+            
             $("#artTextBox").selectable({
                start: function(event, ui){
                    startTextSelection(event, ui);
@@ -53,38 +79,33 @@
             $("#artSelectBox").css("left", left);
             $("#artSelectBox").css("top", $("#artTextBoxContent").offset().top);
             //$("#debug").text($(event.currentTarget));
-            var currCar = findLetterOver(event.clientX, event.clientY);
+            var currCar = artSelector.findLetterOver(event.clientX, event.clientY);
            
            
             var article =  $("#artTextBoxContent");
             var text = article.text().trim();
             var newText = "<span class=\"selection\">" + text.substring(0, currCar) + "</span>" + text.substring(currCar);
             article.html(newText);
+            
+            artSelector.setHandlePosition();
         }
         
-        function findLetterOver(clientX, clientY)
-        {
-            var artText = $("#artTextBoxContent")
-            var textWidth = artText.width();
-            var textHeight = artText.height();
-            var nbCar = artText.text().length;
-            
-            var posInStr = clientX - artText.offset().left;
-            var currCar = posInStr / (textWidth / nbCar);
-            $("#debug").text(textWidth + " " + nbCar + " " + posInStr + " " + currCar);
-            
-            return Math.floor(currCar);
-        }
+        
+        
+        
+        
+        
         
     </script>
     <body>
-        <div id="artBox" style="width: 500px; height: 300px; border: #fa0 solid 1px; padding: 1px">
+        <div id="artBox" style="width: 500px; height: 300px; border: #fa0 solid 1px; padding: 1px;">
             <div id="artTitleBox" style="width: 100%; height: 35px; background-color: #fa0; border: #ffffff solid 0px;">
                 <div id="artDate" style="font: 10px Arial; vertical-align: middle; margin-left: 5px">jeudi à 18:50</div>
                 <div id="artTitle" style="font: 16px Arial; vertical-align: middle; margin-left: 5px">Titre de l'article</div>
             </div>
             <div id="artTextBox" style="width: content-box; height: content-box; margin: 10px; border: #fa0 solid 1px;">
-                <span id="artTextBoxContent">Bacon ipsum dolor sit amet shank chicken beef ribs short ribs tail beef pastrami t-bone ground round. Meatball pastrami pork strip steak, doner drumstick t-bone fatback. Turkey hamburger tri-tip, ball tip capicola spare ribs pork. Turkey swine filet mignon ground round hamburger, sausage shank. Shank tongue beef shankle, bacon turducken cow flank rump ham. T-bone turducken strip steak jowl ball tip, corned beef brisket boudin chuck cow shoulder ham tri-tip.</span>
+                <span id="artTextBoxContent">Bacon ipsum dolor sit amet beef ribs filet mignon tail, pork belly beef short ribs boudin pancetta. Frankfurter pork chop meatball pork filet mignon shoulder sausage boudin turkey prosciutto kielbasa beef biltong salami doner. Pork chop flank pork loin drumstick. Pastrami hamburger brisket tri-tip tail. Brisket hamburger pork chop corned beef.<p />
+Salami kielbasa tri-tip tail, tenderloin beef ribs spare ribs capicola jowl jerky chicken pork chop pork belly. Turkey tail t-bone biltong, jerky flank swine hamburger shank bacon pancetta pork chop ham hock. Beef ribs jerky ball tip ham, salami jowl ribeye pork leberkas flank. Drumstick tail prosciutto ground round ham. Frankfurter flank shank, shankle pork loin pork sausage. Jowl tenderloin kielbasa capicola, frankfurter andouille ham hock ground round.</span>
                 
             </div>
         </div>
@@ -94,5 +115,12 @@
         
         
         <div id="debug">test</div>
+        <div id="handles"></div>
+    
+        
+        <script>
+            artSelector = new ArtSelector();
+            artSelector.initArticle($("#artTextBoxContent"));
+    </script>
     </body>
 </html>
