@@ -5,19 +5,6 @@
  * and open the template in the editor.
  */
 ?>
-<!DOCTYPE html>
-<meta charset="utf-8">
-<html>
-    <head>
-        <link rel="/css/humanity/jquery-ui-1.9.2.custom.css">
-        <script src="/js/jquery-1.8.3.js"></script>
-        <script src="/js/jquery-ui-1.9.2.custom.js"></script>
-        <script src="/js/artselector.class.js"></script>
-        <script src="/js/commentor.class.js"></script>
-        <style>
-            
-        </style>
-    </head>
     <script>
         
         
@@ -97,5 +84,3 @@ Salami kielbasa tri-tip tail, tenderloin beef ribs spare ribs capicola jowl jerk
             commentor = new Commentor();
             artSelector.initArticle($("#artTextBoxContent"));
     </script>
-    </body>
-</html>

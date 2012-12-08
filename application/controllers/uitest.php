@@ -1,10 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class UiTest extends CI_Controller {
+class UiTest extends RegloController {
 
     public function test()
     {
-        $this->load->view("UiTestView");
+        $this->load->template("UiTestView");
         
     }
 }
