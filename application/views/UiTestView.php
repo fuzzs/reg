@@ -13,43 +13,8 @@
         <script src="/js/jquery-1.8.3.js"></script>
         <script src="/js/jquery-ui-1.9.2.custom.js"></script>
         <script src="/js/artselector.class.js"></script>
+        <script src="/js/commentor.class.js"></script>
         <style>
-            .selectBox {
-                position: absolute;
-                background-color: #9999ff;
-                display: none;
-                height: 30px;
-                width: 100px;
-                left: 1px;
-                top: 1px;
-                opacity: 0.5;
-                filter:alpha(opacity=50);
-            }
-            
-            .selection {
-                background-color: #86b3df;
-                color: #ffffff;
-            }
-            
-            .selectHandle
-            {
-                width: 1px;
-                height: 30px;
-                border: #0066cc solid 1px;
-                background-color: #0066cc;
-            }
-            
-            .selectHandleCircle
-            {
-                position: relative;
-                left: -4px;
-                background: #0066cc;
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                border-color: #6aa0d6;
-                border-width: 5px
-            }
             
         </style>
     </head>
@@ -113,13 +78,23 @@ Salami kielbasa tri-tip tail, tenderloin beef ribs spare ribs capicola jowl jerk
         
         <div id="artSelectBox" class="selectBox"></div>
         
+        <div class="commentorFrame">
+            <div class="commentorTitle">
+                <span>Add a comment...</span>
+            </div>
+            <div class="commentorText">
+                <textarea class="commentorX" id="commentorx"></textarea>
+            </div>
+        </div>
         
         <div id="debug">test</div>
         <div id="handles"></div>
+        <div id="comments"></div>
     
         
         <script>
             artSelector = new ArtSelector();
+            commentor = new Commentor();
             artSelector.initArticle($("#artTextBoxContent"));
     </script>
     </body>
