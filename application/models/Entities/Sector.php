@@ -4,9 +4,9 @@ namespace Entities;
 
 /**
  * @Entity
- * @Table(name="usr_users")
+ * @Table(name="art_sectors")
  */
-class User 
+class Sector 
 {
     /**
      * @Id
@@ -16,14 +16,15 @@ class User
     protected $Id;
     
     /**
-     * @OneToMany(targetEntity="UserRole", mappedBy="User")
+     * @Column(type="string", length=250, unique=false, nullable=false)
      */
-    protected $UserRole;
+    protected $SectorName;
     
     /**
-     * @Column(type="string", length=120, unique=true, nullable=false)
+     * @OneToMany(targetEntity="ArticleSector", mappedBy="Sector")
      */
-    protected $Username;
+    protected $ArticleSectors;
+
 }
 
 ?>

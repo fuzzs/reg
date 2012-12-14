@@ -4,9 +4,9 @@ namespace Entities;
 
 /**
  * @Entity
- * @Table(name="usr_users")
+ * @Table(name="usr_roles")
  */
-class User 
+class Role 
 {
     /**
      * @Id
@@ -16,14 +16,14 @@ class User
     protected $Id;
     
     /**
-     * @OneToMany(targetEntity="UserRole", mappedBy="User")
+     * @OneToMany(targetEntity="UserRole", mappedBy="Role")
      */
     protected $UserRole;
     
     /**
      * @Column(type="string", length=120, unique=true, nullable=false)
      */
-    protected $Username;
+    protected $RoleName;
 }
 
 ?>

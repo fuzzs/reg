@@ -1,10 +1,10 @@
 <?php
 
-namespace Entity;
+namespace Entities;
 
 /**
  * @Entity
- * @Table(name="reg_articles")
+ * @Table(name="art_articles")
  */
 class Article 
 {
@@ -29,6 +29,22 @@ class Article
      * @OneToMany(targetEntity="ArticleSegment", mappedBy="Article")
      */
     protected $ArticleSegments;
+    
+    /**
+     * @OneToMany(targetEntity="ArticleComment", mappedBy="Article")
+     */
+    protected $ArticleComments;
+    
+    /**
+     * @OneToMany(targetEntity="ArticleSector", mappedBy="Article")
+     */
+    protected $ArticleSectors;
+    
+    /**
+     * @ManyToOne(targetEntity="Dossier")
+     * @JoinColumn(name="DossierId", referencedColumnName="Id")
+     */
+    protected $Dossier;
 }
 
 ?>

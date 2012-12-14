@@ -1,10 +1,10 @@
 <?php
 
-namespace Entity;
+namespace Entities;
 
 /**
  * @Entity
- * @Table(name="reg_articlesegments")
+ * @Table(name="art_articlesegments")
  */
 class ArticleSegment 
 {
@@ -14,6 +14,12 @@ class ArticleSegment
      * @GeneratedValue(strategy="AUTO")
      */
     protected $Id;
+    
+    /**
+     * @ManyToOne(targetEntity="Article")
+     * @JoinColumn(name="ArticleId", referencedColumnName="Id")
+     */
+    protected $Acticle;
     
     /**
      * @Column(type="string", length=250, unique=false, nullable=false)
@@ -26,10 +32,11 @@ class ArticleSegment
     protected $SegmentContent;
     
     /**
-     * @ManyToOne(targetEntity="Article")
-     * @JoinColumn(name="ArticleId", referencedColumnName="Id")
+     * @Column(type="date", unique=false, nullable=false)
      */
-    protected $Acticle;
+    protected $DatePosted;
+    
+
 }
 
 ?>
