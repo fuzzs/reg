@@ -46,3 +46,184 @@
 [08-Dec-2012 13:21:24] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 261904 bytes) in D:\Projects\GitHub\reg\system\core\Loader.php on line 975
 [08-Dec-2012 13:21:51] PHP Fatal error:  Class 'RegloController' not found in D:\Projects\GitHub\reg\application\controllers\landing.php on line 5
 [08-Dec-2012 13:27:49] PHP Fatal error:  Call to undefined method RegloLoader::template() in D:\Projects\GitHub\reg\application\controllers\landing.php on line 8
+[16-Dec-2012 12:15:50] PHP Fatal error:  Call to a member function template() on a non-object in D:\Projects\GitHub\reg\application\controllers\landing.php on line 12
+[16-Dec-2012 12:33:56] PHP Fatal error:  Call to a member function find() on a non-object in D:\Projects\GitHub\reg\application\controllers\landing.php on line 10
+[16-Dec-2012 12:34:20] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class Article does not exist' in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php:73
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php(73): ReflectionClass->__construct('Article')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(867): Doctrine\Common\Persistence\Mapping\RuntimeReflectionService->getClass('Article')
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(511): Doctrine\ORM\Mapping\ClassMetadataInfo->initializeReflection(Object(Doctrine\Common\Persistence\Mapping\RuntimeReflectionService))
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(300): Doctrine\ORM\Mapping\ClassMetadataFactory->initializeReflection(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doct in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php on line 73
+[16-Dec-2012 19:45:43] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class Article does not exist' in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php:73
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php(73): ReflectionClass->__construct('Article')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(867): Doctrine\Common\Persistence\Mapping\RuntimeReflectionService->getClass('Article')
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(511): Doctrine\ORM\Mapping\ClassMetadataInfo->initializeReflection(Object(Doctrine\Common\Persistence\Mapping\RuntimeReflectionService))
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(300): Doctrine\ORM\Mapping\ClassMetadataFactory->initializeReflection(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doct in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php on line 73
+[16-Dec-2012 19:46:47] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class Article does not exist' in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php:73
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php(73): ReflectionClass->__construct('Article')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(867): Doctrine\Common\Persistence\Mapping\RuntimeReflectionService->getClass('Article')
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(511): Doctrine\ORM\Mapping\ClassMetadataInfo->initializeReflection(Object(Doctrine\Common\Persistence\Mapping\RuntimeReflectionService))
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(300): Doctrine\ORM\Mapping\ClassMetadataFactory->initializeReflection(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doct in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php on line 73
+[16-Dec-2012 19:47:07] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class Article does not exist' in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php:73
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php(73): ReflectionClass->__construct('Article')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(867): Doctrine\Common\Persistence\Mapping\RuntimeReflectionService->getClass('Article')
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(511): Doctrine\ORM\Mapping\ClassMetadataInfo->initializeReflection(Object(Doctrine\Common\Persistence\Mapping\RuntimeReflectionService))
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(300): Doctrine\ORM\Mapping\ClassMetadataFactory->initializeReflection(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doct in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php on line 73
+[16-Dec-2012 19:47:14] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class Article does not exist' in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php:73
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php(73): ReflectionClass->__construct('Article')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(867): Doctrine\Common\Persistence\Mapping\RuntimeReflectionService->getClass('Article')
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(511): Doctrine\ORM\Mapping\ClassMetadataInfo->initializeReflection(Object(Doctrine\Common\Persistence\Mapping\RuntimeReflectionService))
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(300): Doctrine\ORM\Mapping\ClassMetadataFactory->initializeReflection(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doct in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php on line 73
+[16-Dec-2012 19:47:59] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class Article does not exist' in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php:73
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php(73): ReflectionClass->__construct('Article')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(867): Doctrine\Common\Persistence\Mapping\RuntimeReflectionService->getClass('Article')
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(511): Doctrine\ORM\Mapping\ClassMetadataInfo->initializeReflection(Object(Doctrine\Common\Persistence\Mapping\RuntimeReflectionService))
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(300): Doctrine\ORM\Mapping\ClassMetadataFactory->initializeReflection(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doct in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php on line 73
+[16-Dec-2012 19:48:40] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class Article does not exist' in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php:73
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php(73): ReflectionClass->__construct('Article')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(867): Doctrine\Common\Persistence\Mapping\RuntimeReflectionService->getClass('Article')
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(511): Doctrine\ORM\Mapping\ClassMetadataInfo->initializeReflection(Object(Doctrine\Common\Persistence\Mapping\RuntimeReflectionService))
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(300): Doctrine\ORM\Mapping\ClassMetadataFactory->initializeReflection(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doct in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php on line 73
+[16-Dec-2012 19:50:18] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\ORMException' with message 'Unknown Entity namespace alias 'Entities'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php:148
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Configuration.php(176): Doctrine\ORM\ORMException::unknownEntityNamespace('Entities')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(519): Doctrine\ORM\Configuration->getEntityNamespace('Entities')
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataFactory->getFqcnFromAlias('Entities', 'Article')
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(371): Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getMetadataFor('Entities:Articl...')
+#4 D:\Projects\GitHub\reg\application\controllers\landing.php(10): Doctrine\ORM\EntityManager->find('Entities:Articl...', 1) in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php on line 148
+[16-Dec-2012 19:50:40] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\ORMException' with message 'Unknown Entity namespace alias 'Entities'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php:148
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Configuration.php(176): Doctrine\ORM\ORMException::unknownEntityNamespace('Entities')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(519): Doctrine\ORM\Configuration->getEntityNamespace('Entities')
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataFactory->getFqcnFromAlias('Entities', 'Article')
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(371): Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getMetadataFor('Entities:Articl...')
+#4 D:\Projects\GitHub\reg\application\controllers\landing.php(10): Doctrine\ORM\EntityManager->find('Entities:Articl...', 1) in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php on line 148
+[16-Dec-2012 19:50:42] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\ORMException' with message 'Unknown Entity namespace alias 'Entities'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php:148
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Configuration.php(176): Doctrine\ORM\ORMException::unknownEntityNamespace('Entities')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(519): Doctrine\ORM\Configuration->getEntityNamespace('Entities')
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataFactory->getFqcnFromAlias('Entities', 'Article')
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(371): Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getMetadataFor('Entities:Articl...')
+#4 D:\Projects\GitHub\reg\application\controllers\landing.php(10): Doctrine\ORM\EntityManager->find('Entities:Articl...', 1) in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php on line 148
+[16-Dec-2012 19:55:18] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\ORMException' with message 'Unknown Entity namespace alias 'Entities'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php:148
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Configuration.php(176): Doctrine\ORM\ORMException::unknownEntityNamespace('Entities')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(519): Doctrine\ORM\Configuration->getEntityNamespace('Entities')
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataFactory->getFqcnFromAlias('Entities', 'Article')
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(371): Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getMetadataFor('Entities:Articl...')
+#4 D:\Projects\GitHub\reg\application\controllers\landing.php(10): Doctrine\ORM\EntityManager->find('Entities:Articl...', 1) in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php on line 148
+[16-Dec-2012 19:55:25] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class Article does not exist' in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php:73
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php(73): ReflectionClass->__construct('Article')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(867): Doctrine\Common\Persistence\Mapping\RuntimeReflectionService->getClass('Article')
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(511): Doctrine\ORM\Mapping\ClassMetadataInfo->initializeReflection(Object(Doctrine\Common\Persistence\Mapping\RuntimeReflectionService))
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(300): Doctrine\ORM\Mapping\ClassMetadataFactory->initializeReflection(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doct in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php on line 73
+[16-Dec-2012 19:55:51] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class Article does not exist' in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php:73
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php(73): ReflectionClass->__construct('Article')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(867): Doctrine\Common\Persistence\Mapping\RuntimeReflectionService->getClass('Article')
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(511): Doctrine\ORM\Mapping\ClassMetadataInfo->initializeReflection(Object(Doctrine\Common\Persistence\Mapping\RuntimeReflectionService))
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(300): Doctrine\ORM\Mapping\ClassMetadataFactory->initializeReflection(Object(Doctrine\ORM\Mapping\ClassMetadata), Object(Doct in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php on line 73
+[16-Dec-2012 19:56:09] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 19:58:11] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'application/models/Entities\Entities\Article.php' (include_path='.;d:\php\includes') in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php on line 163
+[16-Dec-2012 19:58:20] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 19:59:05] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 19:59:06] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 19:59:06] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 19:59:07] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 19:59:07] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 19:59:56] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 19:59:57] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 20:05:30] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 20:05:56] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 20:06:03] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 20:06:04] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 20:06:04] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 20:06:05] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[16-Dec-2012 20:06:05] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Mapping\MappingException' with message 'The target-entity Entities\ArticleSegment cannot be found in 'Entities\Article#ArticleSegments'.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php:428
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php(905): Doctrine\ORM\Mapping\MappingException::invalidTargetEntityClass('Entities\Articl...', 'Entities\Articl...', 'ArticleSegments')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428

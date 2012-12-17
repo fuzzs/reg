@@ -10,3 +10,7 @@
     Reglo.net
     <span class="regloTitleEdition">Canada / Québec</span>
 </div>
+
+<div>
+    <?php echo $test; ?>
+</div>

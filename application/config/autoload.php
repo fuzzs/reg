@@ -54,7 +54,6 @@ $autoload['packages'] = array();
 
 $autoload['libraries'] = array('doctrine');
 
-
 /*
 | -------------------------------------------------------------------
 |  Auto-load Helper Files

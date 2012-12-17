@@ -64,14 +64,20 @@ body {
     font: 10px arial;
 }
 
+/*bleu foncé #404863*/
+/*bleu clair #727f85*/
+/*beige orangé #af7d3b*/
+/*bois foncé acajou #703e25*/
+
 .regloTitle {
     font-size: 24px;
-    background-color: #99ccff;
+    background-color: #404863;
     width: available;
     height: 50px;
     font-family: Arial,Helvetica,sans-serif;
     padding-left: 10px;
     padding-top: 5px;
+    color: #727f85;
 }
 
 .regloTitleEdition {

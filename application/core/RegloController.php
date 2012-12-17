@@ -5,10 +5,16 @@
  * and open the template in the editor.
  */
 
+//require_once APPPATH.'models\Entities\Article.php';
 
 class RegloController extends CI_Controller 
 {
+    protected $em;
     
- 
-    
+    function __construct()
+    {
+        parent::__construct();
+        $this->em = $this->doctrine->em;
+    }
+   
 }

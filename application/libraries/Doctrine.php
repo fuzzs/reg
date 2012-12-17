@@ -24,13 +24,13 @@ class Doctrine
         
         // load Symfony2 helpers
         // Don't be alarmed, this is necessary for YAML mapping files
-        $symfonyClassLoader = new \Doctrine\Common\ClassLoader('Symfony', APPPATH.'libraries\Symfony');
+        $symfonyClassLoader = new \Doctrine\Common\ClassLoader('Symfony', APPPATH.'libraries/Symfony');
         $symfonyClassLoader->register();
 
         // load the entities
         $entityClassLoader = new \Doctrine\Common\ClassLoader('Entities', APPPATH.'models');
         $entityClassLoader->register();
-
+        
         // load the proxy entities
         $proxyClassLoader = new \Doctrine\Common\ClassLoader('Proxies', APPPATH.'models');
         $proxyClassLoader->register();

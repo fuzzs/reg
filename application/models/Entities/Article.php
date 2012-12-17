@@ -23,7 +23,7 @@ class Article
     /**
      * @Column(type="string", length=500, unique=false, nullable=true)
      */
-    protected $ActicleContent;
+    protected $ArticleContent;
     
     /**
      * @OneToMany(targetEntity="ArticleSegment", mappedBy="Article")
@@ -45,6 +45,18 @@ class Article
      * @JoinColumn(name="DossierId", referencedColumnName="Id")
      */
     protected $Dossier;
+    
+    public function __construct() 
+    {
+        $this->ArticleSegments = new ArrayCollection();
+        $this->ArticleComments = new ArrayCollection();
+        $this->ArticleSectors = new ArrayCollection();
+    }
+    
+    public function getContent()
+    {
+        return $this->ArticleContent;
+    }
 }
 
 ?>
