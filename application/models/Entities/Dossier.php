@@ -48,6 +48,11 @@ class Dossier
      */
     protected $Region;
     
+    
+    public function getDossierName()
+    {
+        return $this->DossierName;
+    }
 }
 
 ?>

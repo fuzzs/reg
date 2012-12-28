@@ -227,3 +227,213 @@ Stack trace:
 #1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(188): Doctrine\ORM\Mapping\ClassMetadataInfo->validateAssocations()
 #2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php(170): Doctrine\ORM\Mapping\ClassMetadataFactory->validateRuntimeMetadata(Object(Doctrine\ORM\Mapping\ClassMetadata), NULL)
 #3 D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php(302): Doctrine\ORM\Mapping in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\MappingException.php on line 428
+[18-Dec-2012 10:10:24] PHP Fatal error:  Class 'Setup' not found in D:\Projects\GitHub\reg\application\libraries\RegloBusiness.php on line 14
+[18-Dec-2012 10:10:40] PHP Fatal error:  Class 'Setup' not found in D:\Projects\GitHub\reg\application\libraries\RegloBusiness.php on line 13
+[18-Dec-2012 10:10:52] PHP Fatal error:  Call to a member function find() on a non-object in D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php on line 29
+[18-Dec-2012 10:15:44] PHP Fatal error:  Call to undefined method Entities\Article::count() in D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php on line 30
+[18-Dec-2012 10:20:34] PHP Parse error:  syntax error, unexpected '}', expecting T_STRING or T_VARIABLE or '{' or '$' in D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php on line 25
+[18-Dec-2012 10:21:13] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'application/libraries\Business\Collections\ArrayCollection.php' (include_path='.;d:\php\includes') in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php on line 163
+[18-Dec-2012 21:43:48] PHP Fatal error:  Class 'Login' not found in D:\Projects\GitHub\reg\application\controllers\landing.php on line 10
+[18-Dec-2012 21:47:45] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Controls/login.php' (include_path='.;d:\php\includes') in D:\Projects\GitHub\reg\application\controllers\landing.php on line 3
+[18-Dec-2012 21:48:05] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in D:\Projects\GitHub\reg\application\controllers\Controls\LoginControl.php on line 3
+[18-Dec-2012 21:48:22] PHP Fatal error:  Class 'Controls\RegloController' not found in D:\Projects\GitHub\reg\application\controllers\Controls\LoginControl.php on line 7
+[18-Dec-2012 21:48:54] PHP Fatal error:  Class 'Controls\Login' not found in D:\Projects\GitHub\reg\application\controllers\landing.php on line 11
+[26-Dec-2012 15:33:35] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\ORMException' with message 'The identifier Id is missing for a query of Entities\Article' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php:160
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(389): Doctrine\ORM\ORMException::missingIdentifierField('Entities\Articl...', 'Id')
+#1 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(42): Doctrine\ORM\EntityManager->find('Entities\Articl...', NULL)
+#2 D:\Projects\GitHub\reg\application\response\Article.php(17): Business\ArticleBusiness->getArticleByID(NULL)
+#3 [internal function]: Article->getArticle(NULL)
+#4 D:\Projects\GitHub\reg\ajaxfw.php(115): call_user_func_array(Array, Array)
+#5 D:\Projects\GitHub\reg\ajaxfw.php(263): ajax->ajax('article')
+#6 D:\Projects\GitHub\reg\application\controllers\AjaxController.php(7): require_once('D:\Projects\Git...')
+#7 [internal function]: AjaxController->main()
+#8 D:\Projects\GitHub\reg\system\core\Cod in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php on line 160
+[26-Dec-2012 15:33:43] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 't0.ArticleDate' in 'field list'' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Connection.php:641
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Connection.php(641): PDOStatement->execute()
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(702): Doctrine\DBAL\Connection->executeQuery('SELECT t0.Id AS...', Array, Array)
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(422): Doctrine\ORM\Persisters\BasicEntityPersister->load(Array)
+#3 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(42): Doctrine\ORM\EntityManager->find('Entities\Articl...', '1')
+#4 D:\Projects\GitHub\reg\application\response\Article.php(17): Business\ArticleBusiness->getArticleByID('1')
+#5 [internal function]: Article->getArticle('1', NULL)
+#6 D:\Projects\GitHub\reg\ajaxfw.php(115): call_user_func_ in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[26-Dec-2012 15:33:47] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 't0.ArticleDate' in 'field list'' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Connection.php:641
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Connection.php(641): PDOStatement->execute()
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(702): Doctrine\DBAL\Connection->executeQuery('SELECT t0.Id AS...', Array, Array)
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(422): Doctrine\ORM\Persisters\BasicEntityPersister->load(Array)
+#3 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(42): Doctrine\ORM\EntityManager->find('Entities\Articl...', '1')
+#4 D:\Projects\GitHub\reg\application\response\Article.php(17): Business\ArticleBusiness->getArticleByID('1')
+#5 [internal function]: Article->getArticle('1', NULL)
+#6 D:\Projects\GitHub\reg\ajaxfw.php(115): call_user_func_ in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[26-Dec-2012 15:39:05] PHP Fatal error:  Call to a member function getContent() on a non-object in D:\Projects\GitHub\reg\application\views\ajax\Article.php on line 5
+[26-Dec-2012 15:44:12] PHP Fatal error:  Call to a member function getContent() on a non-object in D:\Projects\GitHub\reg\application\views\ajax\Article.php on line 5
+[27-Dec-2012 14:40:06] PHP Fatal error:  Call to undefined method Entities\Article::getDomain() in D:\Projects\GitHub\reg\application\views\ajax\Article.php on line 7
+[27-Dec-2012 15:13:30] PHP Fatal error:  Call to undefined method Doctrine\ORM\Query::setMaxResult() in D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php on line 26
+[27-Dec-2012 15:14:40] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Query\QueryException' with message 'SELECT ar, u FROM Article ar JOIN ar.User u' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\QueryException.php:39
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(457): Doctrine\ORM\Query\QueryException::dqlError('SELECT ar, u FR...')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(929): Doctrine\ORM\Query\Parser->semanticalError('Class 'Article'...', Array)
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(1604): Doctrine\ORM\Query\Parser->AbstractSchemaName()
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(1501): Doctrine\ORM\Query\Parser->RangeVariableDeclaration()
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(1243): Doctrine\ORM\Query\Parser->IdentificationVariableDeclaration()
+#5 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(832) in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\QueryException.php on line 49
+[27-Dec-2012 15:15:02] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Query\QueryException' with message 'SELECT ar FROM Article ar' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\QueryException.php:39
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(457): Doctrine\ORM\Query\QueryException::dqlError('SELECT ar FROM ...')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(929): Doctrine\ORM\Query\Parser->semanticalError('Class 'Article'...', Array)
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(1604): Doctrine\ORM\Query\Parser->AbstractSchemaName()
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(1501): Doctrine\ORM\Query\Parser->RangeVariableDeclaration()
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(1243): Doctrine\ORM\Query\Parser->IdentificationVariableDeclaration()
+#5 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(832): Doctrine\ORM\Que in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\QueryException.php on line 49
+[27-Dec-2012 16:51:16] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'application/models\Entities\DateTime.php' (include_path='.;d:\php\includes') in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php on line 163
+[27-Dec-2012 16:51:16] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'application/models\Entities\DateTime.php' (include_path='.;d:\php\includes') in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php on line 163
+[27-Dec-2012 16:51:16] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'application/models\Entities\DateTime.php' (include_path='.;d:\php\includes') in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php on line 163
+[27-Dec-2012 16:51:17] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'application/models\Entities\DateTime.php' (include_path='.;d:\php\includes') in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php on line 163
+[27-Dec-2012 16:51:17] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'application/models\Entities\DateTime.php' (include_path='.;d:\php\includes') in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php on line 163
+[27-Dec-2012 16:53:25] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'application/models\Entities\DateTime.php' (include_path='.;d:\php\includes') in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php on line 163
+[27-Dec-2012 16:53:27] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'application/models\Entities\DateTime.php' (include_path='.;d:\php\includes') in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php on line 163
+[27-Dec-2012 16:53:27] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'application/models\Entities\DateTime.php' (include_path='.;d:\php\includes') in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php on line 163
+[27-Dec-2012 16:53:28] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'application/models\Entities\DateTime.php' (include_path='.;d:\php\includes') in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php on line 163
+[27-Dec-2012 16:53:28] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'application/models\Entities\DateTime.php' (include_path='.;d:\php\includes') in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php on line 163
+[27-Dec-2012 16:54:36] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\ORMInvalidArgumentException' with message 'A new entity was found through the relationship 'Entities\Article#ArticleComments' that was not configured to cascade persist operations for entity: Entities\ArticleComment@00000000444976f60000000006ed6e6a. To solve this issue: Either explicitly call EntityManager#persist() on this unknown entity or configure cascade persist  this association in the mapping for example @ManyToOne(..,cascade={"persist"}). If you cannot find out which entity causes the problem implement 'Entities\ArticleComment#__toString()' to get a clue.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMInvalidArgumentException.php:59
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(769): Doctrine\ORM\ORMInvalidArgumentException::newEntityFoundThroughRelationship(Array, Object(Entities\ArticleComment))
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(653): Doctrine\ORM\UnitOfWork->comput in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMInvalidArgumentException.php on line 59
+[27-Dec-2012 16:54:37] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\ORMInvalidArgumentException' with message 'A new entity was found through the relationship 'Entities\Article#ArticleComments' that was not configured to cascade persist operations for entity: Entities\ArticleComment@00000000715c486c000000001a4f2e7c. To solve this issue: Either explicitly call EntityManager#persist() on this unknown entity or configure cascade persist  this association in the mapping for example @ManyToOne(..,cascade={"persist"}). If you cannot find out which entity causes the problem implement 'Entities\ArticleComment#__toString()' to get a clue.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMInvalidArgumentException.php:59
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(769): Doctrine\ORM\ORMInvalidArgumentException::newEntityFoundThroughRelationship(Array, Object(Entities\ArticleComment))
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(653): Doctrine\ORM\UnitOfWork->comput in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMInvalidArgumentException.php on line 59
+[27-Dec-2012 16:54:37] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\ORMInvalidArgumentException' with message 'A new entity was found through the relationship 'Entities\Article#ArticleComments' that was not configured to cascade persist operations for entity: Entities\ArticleComment@000000007615e3d600000000598401c9. To solve this issue: Either explicitly call EntityManager#persist() on this unknown entity or configure cascade persist  this association in the mapping for example @ManyToOne(..,cascade={"persist"}). If you cannot find out which entity causes the problem implement 'Entities\ArticleComment#__toString()' to get a clue.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMInvalidArgumentException.php:59
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(769): Doctrine\ORM\ORMInvalidArgumentException::newEntityFoundThroughRelationship(Array, Object(Entities\ArticleComment))
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(653): Doctrine\ORM\UnitOfWork->comput in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMInvalidArgumentException.php on line 59
+[27-Dec-2012 16:54:37] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\ORMInvalidArgumentException' with message 'A new entity was found through the relationship 'Entities\Article#ArticleComments' that was not configured to cascade persist operations for entity: Entities\ArticleComment@0000000018cb04740000000047c35d31. To solve this issue: Either explicitly call EntityManager#persist() on this unknown entity or configure cascade persist  this association in the mapping for example @ManyToOne(..,cascade={"persist"}). If you cannot find out which entity causes the problem implement 'Entities\ArticleComment#__toString()' to get a clue.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMInvalidArgumentException.php:59
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(769): Doctrine\ORM\ORMInvalidArgumentException::newEntityFoundThroughRelationship(Array, Object(Entities\ArticleComment))
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(653): Doctrine\ORM\UnitOfWork->comput in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMInvalidArgumentException.php on line 59
+[27-Dec-2012 16:54:37] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\ORMInvalidArgumentException' with message 'A new entity was found through the relationship 'Entities\Article#ArticleComments' that was not configured to cascade persist operations for entity: Entities\ArticleComment@00000000110448630000000013bd05bc. To solve this issue: Either explicitly call EntityManager#persist() on this unknown entity or configure cascade persist  this association in the mapping for example @ManyToOne(..,cascade={"persist"}). If you cannot find out which entity causes the problem implement 'Entities\ArticleComment#__toString()' to get a clue.' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMInvalidArgumentException.php:59
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(769): Doctrine\ORM\ORMInvalidArgumentException::newEntityFoundThroughRelationship(Array, Object(Entities\ArticleComment))
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(653): Doctrine\ORM\UnitOfWork->comput in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMInvalidArgumentException.php on line 59
+[27-Dec-2012 16:56:51] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'CommentText' cannot be null' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php:142
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php(142): PDOStatement->execute(NULL)
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(274): Doctrine\DBAL\Statement->execute()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(922): Doctrine\ORM\Persisters\BasicEntityPersister->executeInserts()
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(313): Doctrine\ORM\UnitOfWork->executeInserts(Object(Doctrine\ORM\Mapping\ClassMetadata))
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(356): Doctrine\ORM\UnitOfWork->commit(NULL)
+#5 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(77): Doctrine\ORM\EntityManager-> in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[27-Dec-2012 16:56:58] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'CommentText' cannot be null' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php:142
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php(142): PDOStatement->execute(NULL)
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(274): Doctrine\DBAL\Statement->execute()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(922): Doctrine\ORM\Persisters\BasicEntityPersister->executeInserts()
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(313): Doctrine\ORM\UnitOfWork->executeInserts(Object(Doctrine\ORM\Mapping\ClassMetadata))
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(356): Doctrine\ORM\UnitOfWork->commit(NULL)
+#5 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(77): Doctrine\ORM\EntityManager-> in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[27-Dec-2012 16:56:59] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'CommentText' cannot be null' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php:142
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php(142): PDOStatement->execute(NULL)
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(274): Doctrine\DBAL\Statement->execute()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(922): Doctrine\ORM\Persisters\BasicEntityPersister->executeInserts()
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(313): Doctrine\ORM\UnitOfWork->executeInserts(Object(Doctrine\ORM\Mapping\ClassMetadata))
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(356): Doctrine\ORM\UnitOfWork->commit(NULL)
+#5 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(77): Doctrine\ORM\EntityManager-> in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[27-Dec-2012 16:57:00] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'CommentText' cannot be null' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php:142
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php(142): PDOStatement->execute(NULL)
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(274): Doctrine\DBAL\Statement->execute()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(922): Doctrine\ORM\Persisters\BasicEntityPersister->executeInserts()
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(313): Doctrine\ORM\UnitOfWork->executeInserts(Object(Doctrine\ORM\Mapping\ClassMetadata))
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(356): Doctrine\ORM\UnitOfWork->commit(NULL)
+#5 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(77): Doctrine\ORM\EntityManager-> in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[27-Dec-2012 16:57:00] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'CommentText' cannot be null' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php:142
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php(142): PDOStatement->execute(NULL)
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(274): Doctrine\DBAL\Statement->execute()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(922): Doctrine\ORM\Persisters\BasicEntityPersister->executeInserts()
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(313): Doctrine\ORM\UnitOfWork->executeInserts(Object(Doctrine\ORM\Mapping\ClassMetadata))
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(356): Doctrine\ORM\UnitOfWork->commit(NULL)
+#5 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(77): Doctrine\ORM\EntityManager-> in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[27-Dec-2012 17:01:22] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'CommentText' cannot be null' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php:142
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php(142): PDOStatement->execute(NULL)
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(274): Doctrine\DBAL\Statement->execute()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(922): Doctrine\ORM\Persisters\BasicEntityPersister->executeInserts()
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(313): Doctrine\ORM\UnitOfWork->executeInserts(Object(Doctrine\ORM\Mapping\ClassMetadata))
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(356): Doctrine\ORM\UnitOfWork->commit(NULL)
+#5 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(77): Doctrine\ORM\EntityManager-> in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[27-Dec-2012 17:01:22] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'CommentText' cannot be null' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php:142
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php(142): PDOStatement->execute(NULL)
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(274): Doctrine\DBAL\Statement->execute()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(922): Doctrine\ORM\Persisters\BasicEntityPersister->executeInserts()
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(313): Doctrine\ORM\UnitOfWork->executeInserts(Object(Doctrine\ORM\Mapping\ClassMetadata))
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(356): Doctrine\ORM\UnitOfWork->commit(NULL)
+#5 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(77): Doctrine\ORM\EntityManager-> in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[27-Dec-2012 17:01:22] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'CommentText' cannot be null' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php:142
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php(142): PDOStatement->execute(NULL)
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(274): Doctrine\DBAL\Statement->execute()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(922): Doctrine\ORM\Persisters\BasicEntityPersister->executeInserts()
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(313): Doctrine\ORM\UnitOfWork->executeInserts(Object(Doctrine\ORM\Mapping\ClassMetadata))
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(356): Doctrine\ORM\UnitOfWork->commit(NULL)
+#5 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(77): Doctrine\ORM\EntityManager-> in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[27-Dec-2012 17:01:23] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'CommentText' cannot be null' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php:142
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php(142): PDOStatement->execute(NULL)
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(274): Doctrine\DBAL\Statement->execute()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(922): Doctrine\ORM\Persisters\BasicEntityPersister->executeInserts()
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(313): Doctrine\ORM\UnitOfWork->executeInserts(Object(Doctrine\ORM\Mapping\ClassMetadata))
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(356): Doctrine\ORM\UnitOfWork->commit(NULL)
+#5 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(77): Doctrine\ORM\EntityManager-> in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[27-Dec-2012 17:01:23] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'CommentText' cannot be null' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php:142
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php(142): PDOStatement->execute(NULL)
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(274): Doctrine\DBAL\Statement->execute()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(922): Doctrine\ORM\Persisters\BasicEntityPersister->executeInserts()
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(313): Doctrine\ORM\UnitOfWork->executeInserts(Object(Doctrine\ORM\Mapping\ClassMetadata))
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(356): Doctrine\ORM\UnitOfWork->commit(NULL)
+#5 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(77): Doctrine\ORM\EntityManager-> in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[27-Dec-2012 17:05:49] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'CommentText' cannot be null' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php:142
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php(142): PDOStatement->execute(NULL)
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(274): Doctrine\DBAL\Statement->execute()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(922): Doctrine\ORM\Persisters\BasicEntityPersister->executeInserts()
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(313): Doctrine\ORM\UnitOfWork->executeInserts(Object(Doctrine\ORM\Mapping\ClassMetadata))
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(356): Doctrine\ORM\UnitOfWork->commit(NULL)
+#5 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(77): Doctrine\ORM\EntityManager-> in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[27-Dec-2012 17:08:13] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\ORMException' with message 'The identifier Id is missing for a query of Entities\Article' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php:160
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(389): Doctrine\ORM\ORMException::missingIdentifierField('Entities\Articl...', 'Id')
+#1 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(48): Doctrine\ORM\EntityManager->find('Entities\Articl...', NULL)
+#2 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(67): Business\ArticleBusiness->getArticleByID(NULL)
+#3 D:\Projects\GitHub\reg\application\response\ArticleAjaxController.php(80): Business\ArticleBusiness->addComment(NULL, NULL)
+#4 [internal function]: ArticleAjaxController->addComment(NULL, NULL, NULL)
+#5 D:\Projects\GitHub\reg\ajaxfw.php(115): call_user_func_array(Array, Array)
+#6 D:\Projects\GitHub\reg\ajaxfw.php(263): ajax->ajax('articleajaxcont...')
+#7 D:\Projects in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php on line 160
+[27-Dec-2012 17:08:23] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\ORMException' with message 'The identifier Id is missing for a query of Entities\Article' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php:160
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(389): Doctrine\ORM\ORMException::missingIdentifierField('Entities\Articl...', 'Id')
+#1 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(48): Doctrine\ORM\EntityManager->find('Entities\Articl...', NULL)
+#2 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(67): Business\ArticleBusiness->getArticleByID(NULL)
+#3 D:\Projects\GitHub\reg\application\response\ArticleAjaxController.php(80): Business\ArticleBusiness->addComment(NULL, NULL)
+#4 [internal function]: ArticleAjaxController->addComment(NULL, NULL, NULL)
+#5 D:\Projects\GitHub\reg\ajaxfw.php(115): call_user_func_array(Array, Array)
+#6 D:\Projects\GitHub\reg\ajaxfw.php(263): ajax->ajax('articleajaxcont...')
+#7 D:\Projects in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php on line 160
+[27-Dec-2012 17:09:18] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\ORMException' with message 'The identifier Id is missing for a query of Entities\Article' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php:160
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(389): Doctrine\ORM\ORMException::missingIdentifierField('Entities\Articl...', 'Id')
+#1 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(48): Doctrine\ORM\EntityManager->find('Entities\Articl...', NULL)
+#2 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(67): Business\ArticleBusiness->getArticleByID(NULL)
+#3 D:\Projects\GitHub\reg\application\response\ArticleAjaxController.php(80): Business\ArticleBusiness->addComment(NULL, NULL)
+#4 [internal function]: ArticleAjaxController->addComment(NULL, NULL, NULL)
+#5 D:\Projects\GitHub\reg\ajaxfw.php(115): call_user_func_array(Array, Array)
+#6 D:\Projects\GitHub\reg\ajaxfw.php(263): ajax->ajax('articleajaxcont...')
+#7 D:\Projects in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php on line 160
+[27-Dec-2012 17:22:22] PHP Fatal error:  Call to a member function load() on a non-object in D:\Projects\GitHub\reg\application\response\ArticleAjaxController.php on line 98
+[27-Dec-2012 20:34:42] PHP Fatal error:  Call to undefined method Entities\ArticleComment::getDate() in D:\Projects\GitHub\reg\application\views\ajax\ArticleCommentList.php on line 7

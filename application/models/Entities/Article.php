@@ -21,9 +21,14 @@ class Article
     protected $ArticleTitle;
     
     /**
-     * @Column(type="string", length=500, unique=false, nullable=true)
+     * @Column(type="blob", unique=false, nullable=true)
      */
     protected $ArticleContent;
+    
+    /**
+     * @Column(type="date", unique=false, nullable=false)
+     */
+    protected $ArticleDate;
     
     /**
      * @OneToMany(targetEntity="ArticleSegment", mappedBy="Article")
@@ -46,6 +51,12 @@ class Article
      */
     protected $Dossier;
     
+    /**
+     * @ManyToOne(targetEntity="User")
+     * @JoinColumn(name="UserId", referencedColumnName="Id")
+     */
+    protected $User;
+    
     public function __construct() 
     {
         $this->ArticleSegments = new ArrayCollection();
@@ -53,10 +64,19 @@ class Article
         $this->ArticleSectors = new ArrayCollection();
     }
     
-    public function getContent()
-    {
-        return $this->ArticleContent;
-    }
+    public function getID() { return $this->Id; }
+    
+    public function getContent() { return stream_get_contents($this->ArticleContent); }
+    
+    public function getTitle() { return $this->ArticleTitle; }
+    
+    public function getDate() { return $this->ArticleDate; }
+    
+    public function getDossier() { return $this->Dossier; }
+    
+    public function getUser() { return $this->User; }
+    
+    public function getComments() { return $this->ArticleComments; }
 }
 
 ?>

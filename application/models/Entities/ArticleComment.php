@@ -27,6 +27,41 @@ class ArticleComment
      */
     protected $Segment;
     
+    /**
+     * @ManyToOne(targetEntity="User")
+     * @JoinColumn(name="UserId", referencedColumnName="Id")
+     */
+    protected $User;
+
+    /**
+     * @Column(type="string", length=2000, unique=false, nullable=false)
+     */
+    protected $CommentText;
+    
+    /**
+     * @Column(type="datetime", unique=false, nullable=false)
+     */
+    protected $CommentDate;
+    
+    public function __construct() 
+    {
+        
+    }
+    
+    public function createComment($article, $user, $commentText)
+    {
+        $this->CommentText = $commentText;
+        $this->CommentDate = new \DateTime("now");
+        
+        $this->Article = $article;
+        $this->User = $user;
+    }
+    
+    public function getID() { return $this->Id; }
+    public function getUser() { return $this->User; }
+    public function getCommentText() { return $this->CommentText; }
+    public function getCommentDate() { return $this->CommentDate; }
+    
     
 }
 

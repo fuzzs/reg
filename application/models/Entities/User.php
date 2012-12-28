@@ -24,6 +24,39 @@ class User
      * @Column(type="string", length=120, unique=true, nullable=false)
      */
     protected $Username;
+    
+    /**
+     * @Column(type="string", length=120, unique=false, nullable=false)
+     */
+    protected $Firstname;
+    
+    /**
+     * @Column(type="string", length=120, unique=false, nullable=false)
+     */
+    protected $Lastname;
+    
+    
+    
+    public function getUsername()
+    {
+        return $this->Username;
+    }
+    
+    public function getFirstname()
+    {
+        return $this->Firstname;
+    }
+    
+    public function getLastname()
+    {
+        return $this->Lastname;
+    }
+    
+    public function getDisplayName()
+    {
+        return $this->Firstname . " " . $this->Lastname;
+        
+    }
 }
 
 ?>

@@ -41,6 +41,10 @@
 $route['default_controller'] = "landing";
 $route['404_override'] = '';
 
+$route['article/(:any)'] = "ArticleController/main";
+$route['article'] = "ArticleController/main";
+$route['Article'] = "ArticleController/main";
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

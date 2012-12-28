@@ -1,10 +1,19 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php 
 
+namespace Controls;
 
-class Login extends RegloController {
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class LoginControl extends \RegloController {
 
     public function index()
     {
-        $this->load->view('loginView', $data);
+        $this->showLoginForm();
+    }
+    
+    public function showLoginForm()
+    {
+        $data['language'] = "English";
+        return $this->load->view('loginControlView', $data, true);
     }
 }
