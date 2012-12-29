@@ -6,7 +6,7 @@
  * @author fuzzes
  */
 class RegloBusiness 
-{
+{    
     public function __construct()
     {
        

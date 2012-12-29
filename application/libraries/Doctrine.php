@@ -5,7 +5,7 @@ use Doctrine\Common\ClassLoader,
 
 class Doctrine
 {
-
+    /* @var $em Doctrine\ORM\EntityManager */
     public $em;
 
     public function __construct()
@@ -74,6 +74,14 @@ class Doctrine
         // store it as a member, for use in our CodeIgniter controllers.
         $this->em = $em;
 
+    }
+    
+    /**
+     * @return Doctrine\ORM\EntityManager
+     */
+    public function getEntityManager()
+    {
+        return $this->em;
     }
 
 }

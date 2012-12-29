@@ -189,9 +189,18 @@ input.loginButton:active {
 
 .artListHandle{
     width: 20px;
-     border: 2px #555233 solid;
+    border: 2px #555233 solid;
     height: 20px;
     cursor: pointer;
+    display: inline-block;
+}
+
+.artEditHandle{
+    width: 20px;
+    border: 2px #555233 solid;
+    height: 20px;
+    cursor: pointer;
+    display: inline-block;
 }
 
 .artListItem{
@@ -347,4 +356,32 @@ input.loginButton:active {
     padding: 2px;
     vertical-align: top;
     display: inline-block;
+}
+
+.artEditContent {
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.artEditFrame {
+    padding: 5px;
+    background-color: #d0d0d0;
+    width: auto;
+    height: 400px;
+}
+
+.artEditTitle {
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+textarea.taArticle {
+    font-size: 12px;
+    width: 550px;
+    height: 300px;
+}
+
+input.article {
+    font-size: 14px;
+    width: 550px;
 }

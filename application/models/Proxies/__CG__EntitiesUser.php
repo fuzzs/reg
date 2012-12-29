@@ -42,6 +42,12 @@ class User extends \Entities\User implements \Doctrine\ORM\Proxy\Proxy
     }
 
     
+    public function getId()
+    {
+        $this->__load();
+        return parent::getId();
+    }
+
     public function getUsername()
     {
         $this->__load();
@@ -60,10 +66,46 @@ class User extends \Entities\User implements \Doctrine\ORM\Proxy\Proxy
         return parent::getLastname();
     }
 
+    public function getDisplayName()
+    {
+        $this->__load();
+        return parent::getDisplayName();
+    }
+
+    public function getHashedPassword()
+    {
+        $this->__load();
+        return parent::getHashedPassword();
+    }
+
+    public function getEmail()
+    {
+        $this->__load();
+        return parent::getEmail();
+    }
+
+    public function getLocale()
+    {
+        $this->__load();
+        return parent::getLocale();
+    }
+
+    public function getCountry()
+    {
+        $this->__load();
+        return parent::getCountry();
+    }
+
+    public function getRegion()
+    {
+        $this->__load();
+        return parent::getRegion();
+    }
+
 
     public function __sleep()
     {
-        return array('__isInitialized__', 'Id', 'Username', 'Firstname', 'Lastname', 'UserRole');
+        return array('__isInitialized__', 'Id', 'Username', 'Firstname', 'Lastname', 'Email', 'Password', 'FacebookKey', 'Locale', 'UserRoles', 'UserLogins', 'Country', 'Region');
     }
 
     public function __clone()

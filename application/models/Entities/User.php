@@ -18,7 +18,24 @@ class User
     /**
      * @OneToMany(targetEntity="UserRole", mappedBy="User")
      */
-    protected $UserRole;
+    protected $UserRoles;
+    
+    /**
+     * @OneToMany(targetEntity="UserLogin", mappedBy="User")
+     */
+    protected $UserLogins;
+    
+    /**
+     * @ManyToOne(targetEntity="Country")
+     * @JoinColumn(name="CountryCode", referencedColumnName="Code")
+     */
+    protected $Country;
+    
+    /**
+     * @ManyToOne(targetEntity="Region")
+     * @JoinColumn(name="RegionId", referencedColumnName="Id")
+     */
+    protected $Region;
     
     /**
      * @Column(type="string", length=120, unique=true, nullable=false)
@@ -35,28 +52,52 @@ class User
      */
     protected $Lastname;
     
+    /**
+     * @Column(type="string", length=250, unique=false, nullable=true)
+     */
+    protected $Email;
+    
+    /**
+     * @Column(type="string", length=60, unique=false, nullable=true)
+     */
+    protected $Password;
+    
+    /**
+     * @Column(type="string", length=60, unique=false, nullable=true)
+     */
+    protected $FacebookKey;
+    
+    /**
+     * @Column(type="string", length=5, unique=false, nullable=true)
+     */
+    protected $Locale;
     
     
-    public function getUsername()
-    {
-        return $this->Username;
-    }
+    public function getId() {return $this->Id; }
     
-    public function getFirstname()
-    {
-        return $this->Firstname;
-    }
+    public function getUsername() {return $this->Username; }
     
-    public function getLastname()
-    {
-        return $this->Lastname;
-    }
+    public function getFirstname() { return $this->Firstname; }
     
-    public function getDisplayName()
-    {
-        return $this->Firstname . " " . $this->Lastname;
-        
-    }
+    public function getLastname() { return $this->Lastname; }
+    
+    public function getDisplayName() { return $this->Firstname . " " . $this->Lastname; }
+    
+    public function getHashedPassword() { return $this->Password; }
+    
+    public function getEmail() { return $this->email; }
+    
+    public function getLocale() { return $this->Locale; }
+    
+    /**
+     * @return Country
+     */
+    public function getCountry() { return $this->Country; }
+    
+    /**
+     * @return Region
+     */
+    public function getRegion() { return $this->Region; }
 }
 
 ?>

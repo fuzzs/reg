@@ -8,7 +8,6 @@
         cache: false
     });
     
-    var art = new Article();
     
     $(function()
     {
@@ -25,11 +24,14 @@
         
         
         $('#articleListHandle').click(function(){
-            art.showArticleList();
+            art.changeViewState("list", false);
+        });
+        
+        $('#articleEditHandle').click(function(){
+            art.getEditArticleForm();
         });
         
         art.getArticleList(1);
-   
     });
     
     
@@ -49,6 +51,7 @@
 <div class="artBase">
     <div id="articleHeaderHolder" class="artHeaderHolder">
         <div id="articleListHandle" class="artListHandle"></div>
+        <div id="articleEditHandle" class="artEditHandle"></div>
     </div>
 
     <div id="articleList" class="artList">
@@ -70,6 +73,10 @@
 
     </div>
     <div id="articleCommentHolder" class="artCommentHolders">
+        
+    </div>
+    
+    <div id="articleEditHolder" class="">
         
     </div>
 </div>

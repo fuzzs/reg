@@ -1,10 +1,14 @@
 <?php
 
-
+/**
+ * 
+ */
 class ArticleAjaxController extends RegloController 
 {
+    /* @var $articleBusiness Business\ArticleBusiness */
     private $articleBusiness;
-    private $numRec = 5;
+    /* @var $numRec integer */
+    private $numRec = 30;
     
     function __construct()
     {
@@ -76,8 +80,8 @@ class ArticleAjaxController extends RegloController
     
     function addComment()
     {
-        $articleID = $this->input->post("articleID");
-        $commentText = $this->input->post("commentText");
+        $articleID = urldecode($this->input->post("articleID"));
+        $commentText = urldecode($this->input->post("commentText"));
         
         $this->init();
         $retValue = $this->articleBusiness->addComment($articleID, $commentText);
@@ -97,6 +101,28 @@ class ArticleAjaxController extends RegloController
             $data['comments'] = $article->Data->getComments();
             $this->load->view("ajax\ArticleCommentList", $data);
         }
+    }
+    
+    function getEditArticleForm()
+    {
+        //TODO: get dossier list
+        //TODO: get sections list
+        $data['dossiers'] = "";
+        $data['sections'] = "";
+        
+        $data['lbl'] = array( "art_post_button" => $this->lang->line('art_post_button'));
+        $this->load->view("ajax\ArticleEdit", $data);
+    }
+    
+    function addArticle()
+    {
+        $articleTitle = urldecode($this->input->post("articleTitle"));
+        $articleText = urldecode($this->input->post("articleText"));
+        
+        $this->init();
+        $retValue = $this->articleBusiness->addArticle($articleTitle, $articleText);
+        
+        return "cool";
     }
     
 }

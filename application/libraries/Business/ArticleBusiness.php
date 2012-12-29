@@ -13,13 +13,28 @@ use Doctrine\Common\ClassLoader,
  */
 class ArticleBusiness extends BusinessBase
 {
-    public function __construct($doctrine) 
+    /* @var $em EntityManager */
+    protected $em;
+
+    /**
+     * 
+     * @param \Doctrine $doctrine
+     */
+    public function __construct(\Doctrine $doctrine) 
     {
         parent::__construct($doctrine);
+        $this->em = $doctrine->getEntityManager();
     }
     
+    /**
+     * 
+     * @param integer $start
+     * @param integer $numRec
+     * @return \Business\RegloTransport
+     */
     public function getAllArticles($start, $numRec)
     {
+        /* @var $ret RegloTransport */
         $ret = new RegloTransport();
         
         $dql = "SELECT ar FROM Entities\Article ar";
@@ -42,6 +57,11 @@ class ArticleBusiness extends BusinessBase
         return $ret;
     }
     
+    /**
+     * 
+     * @param integer $articleID
+     * @return \Business\RegloTransport
+     */
     public function getArticleByID($articleID)
     {
         $ret = new RegloTransport();
@@ -60,8 +80,15 @@ class ArticleBusiness extends BusinessBase
         return $ret;
     }
     
+    /**
+     * 
+     * @param integer $articleID
+     * @param string $commentText
+     * @return \Business\RegloTransport
+     */
     public function addComment($articleID, $commentText)
     {
+        //TODO: check user rights
         $ret = new RegloTransport();
         
         $retArticle = $this->getArticleByID($articleID);
@@ -78,6 +105,28 @@ class ArticleBusiness extends BusinessBase
             $ret->HasError = false;
             $ret->Message = "OK";
         }
+        
+        return $ret;
+    }
+    
+    /**
+     * 
+     * @param string $articleTitle
+     * @param string $articleText
+     * @return \Business\RegloTransport
+     */
+    public function addArticle($articleTitle, $articleText)
+    {
+        //TODO: check user rights
+        $ret = new RegloTransport();
+        
+        $article = new \Entities\Article();
+        $article->createArticle($this->currentUser, $articleTitle, $articleText);
+        $this->em->persist($article);
+        $this->em->flush();
+        $ret->HasError = false;
+        $ret->Message = "OK";
+        
         
         return $ret;
     }

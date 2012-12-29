@@ -26,7 +26,7 @@ class Article
     protected $ArticleContent;
     
     /**
-     * @Column(type="date", unique=false, nullable=false)
+     * @Column(type="datetime", unique=false, nullable=false)
      */
     protected $ArticleDate;
     
@@ -59,9 +59,9 @@ class Article
     
     public function __construct() 
     {
-        $this->ArticleSegments = new ArrayCollection();
-        $this->ArticleComments = new ArrayCollection();
-        $this->ArticleSectors = new ArrayCollection();
+        $this->ArticleSegments = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->ArticleComments = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->ArticleSectors = new \Doctrine\Common\Collections\ArrayCollection();
     }
     
     public function getID() { return $this->Id; }
@@ -77,6 +77,15 @@ class Article
     public function getUser() { return $this->User; }
     
     public function getComments() { return $this->ArticleComments; }
+    
+    public function createArticle($user, $articleTitle, $articleContent)
+    {
+        $this->User = $user;
+        $this->ArticleTitle = $articleTitle;
+        $this->ArticleContent = $articleContent;
+        
+        $this->ArticleDate = new \DateTime("now");
+    }
 }
 
 ?>

@@ -16,4 +16,17 @@ class LoginControl extends \RegloController {
         $data['language'] = "English";
         return $this->load->view('loginControlView', $data, true);
     }
+    
+    public function connectUser($email, $password)
+    {
+        $email = $this->input->post['email'];
+        $password = $this->input->post['password'];
+        
+        $this->userBusiness->connectUser($email, $password);
+    }
+    
+    public function disconnectUser()
+    {
+        
+    }
 }

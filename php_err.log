@@ -437,3 +437,25 @@ Stack trace:
 #7 D:\Projects in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\ORMException.php on line 160
 [27-Dec-2012 17:22:22] PHP Fatal error:  Call to a member function load() on a non-object in D:\Projects\GitHub\reg\application\response\ArticleAjaxController.php on line 98
 [27-Dec-2012 20:34:42] PHP Fatal error:  Call to undefined method Entities\ArticleComment::getDate() in D:\Projects\GitHub\reg\application\views\ajax\ArticleCommentList.php on line 7
+[28-Dec-2012 14:12:58] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'application/models\Entities\ArrayCollection.php' (include_path='.;d:\php\includes') in D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php on line 163
+[28-Dec-2012 14:14:03] PHP Fatal error:  Call to a member function getDossierName() on a non-object in D:\Projects\GitHub\reg\application\views\ajax\Article.php on line 7
+[28-Dec-2012 14:38:04] PHP Fatal error:  Class 'IntlDateFormatter' not found in D:\Projects\GitHub\reg\application\core\RegloController.php on line 21
+[28-Dec-2012 14:38:31] PHP Fatal error:  Class 'IntlDateFormatter' not found in D:\Projects\GitHub\reg\application\core\RegloController.php on line 21
+[28-Dec-2012 15:46:24] PHP Fatal error:  Call to a member function getEntityManager() on a non-object in D:\Projects\GitHub\reg\application\libraries\Business\BusinessBase.php on line 26
+[28-Dec-2012 15:47:33] PHP Fatal error:  Call to a member function getEntityManager() on a non-object in D:\Projects\GitHub\reg\application\libraries\Business\BusinessBase.php on line 26
+[28-Dec-2012 15:49:43] PHP Fatal error:  Call to a member function getEntityManager() on a non-object in D:\Projects\GitHub\reg\application\libraries\Business\BusinessBase.php on line 26
+[28-Dec-2012 15:50:21] PHP Fatal error:  Call to a member function getEntityManager() on a non-object in D:\Projects\GitHub\reg\application\libraries\Business\BusinessBase.php on line 26
+[28-Dec-2012 15:51:22] PHP Fatal error:  Class 'Business\ArticleBusiness' not found in D:\Projects\GitHub\reg\application\controllers\ArticleController.php on line 19
+[28-Dec-2012 15:51:51] PHP Fatal error:  Class 'Business\ArticleBusiness' not found in D:\Projects\GitHub\reg\application\controllers\ArticleController.php on line 19
+[28-Dec-2012 15:52:04] PHP Fatal error:  Call to a member function getEntityManager() on a non-object in D:\Projects\GitHub\reg\application\libraries\Business\BusinessBase.php on line 26
+[28-Dec-2012 15:52:14] PHP Fatal error:  Call to a member function getEntityManager() on a non-object in D:\Projects\GitHub\reg\application\libraries\Business\BusinessBase.php on line 26
+[28-Dec-2012 15:52:20] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 't0.FacebookKey' in 'field list'' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Connection.php:641
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Connection.php(641): PDOStatement->execute()
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(702): Doctrine\DBAL\Connection->executeQuery('SELECT t0.Id AS...', Array, Array)
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(422): Doctrine\ORM\Persisters\BasicEntityPersister->load(Array)
+#3 D:\Projects\GitHub\reg\application\libraries\Business\BusinessBase.php(32): Doctrine\ORM\EntityManager->find('Entities\User', 1)
+#4 D:\Projects\GitHub\reg\application\libraries\Business\BusinessBase.php(27): Business\BusinessBase->getCurrentUser()
+#5 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(18): Business\BusinessBase->__constru in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[29-Dec-2012 00:46:52] PHP Fatal error:  Call to a member function all_userdata() on a non-object in D:\Projects\GitHub\reg\application\libraries\Business\BusinessBase.php on line 32
+[29-Dec-2012 00:53:14] PHP Fatal error:  Call to undefined method Business\UserBusiness::setCurrentUser() in D:\Projects\GitHub\reg\application\libraries\Business\BusinessBase.php on line 27
