@@ -18,6 +18,7 @@ class BusinessBase
     
     
     //TODO: check current user in session
+    
     /* @var $currentUser Entities\User */
     protected $currentUser;
     

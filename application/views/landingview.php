@@ -78,7 +78,10 @@
     </div>
 </div>
 
-<div>
-    <?php echo $test; ?>
+<a href="index.php/Article/">Article</a>
+
+<?= $test ?>
+
+<div id="#debug">
+    
 </div>
-<a href="index.php/Article/main/">Article</a>

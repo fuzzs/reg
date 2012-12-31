@@ -51,26 +51,30 @@ class UserBusiness extends BusinessBase
     
     public function getCurrentUser($userdata)       
     {
-        if ($userdata['userid'] > 0)
+        if ($userdata != null && array_key_exists('userid', $userdata))
         {
             $this->currentUser = $this->em->find("Entities\User", $userdata['userid']);
         }
+        else
+        {
+            $this->currentUser = new \Entities\User();
+        }
+        
+        return $this->currentUser;
     }
     
     public function connectUser($email, $password)
     {
         $ret = new RegloTransport();
         
-        $dql = "SELECT u FROM Entities\User u WHERE u.email = :email";
+        $dql = "SELECT u FROM Entities\User u WHERE u.Email = :email";
         $query = $this->em->createQuery($dql);
-        $query->setParameters(array(
-            'email' => $email
-        ));
+        $query->setParameter('email', $email);
         
-        $ret = $query->getResult();
-        if (array_count_values($ret) == 1)
+        $result = $query->getResult();
+        if (count($result) == 1)
         {
-            $this->currentUser = $ret[0];
+            $this->currentUser = $result[0];
             if ($this->currentUser->getHashedPassword() == sha1($password))
             {
                 $userdata = array(
@@ -79,7 +83,7 @@ class UserBusiness extends BusinessBase
                     'userid' => $this->currentUser->getId()
                 );
                 
-                $this->session->set_userdata($userdata);
+                $ret->Data = $userdata;
                 $ret->HasError = false;
             }
             else

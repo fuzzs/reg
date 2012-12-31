@@ -15,6 +15,9 @@ class RegloController extends CI_Controller
     /* @var $userBusiness Business\UserBusiness */
     protected $userBusiness;
     
+    /* @var $currentUser Entities\User */
+    protected $currentUser;
+    
     function __construct()
     {
         parent::__construct();
@@ -22,13 +25,16 @@ class RegloController extends CI_Controller
         $this->lang->load('english', 'english');
         $this->locale = "en_US";
         
-        $userBusiness = new Business\UserBusiness($this->doctrine);
+        $this->userBusiness = new Business\UserBusiness($this->doctrine);
+        
+        $this->getUserFromSession();
     }
     
     public function getUserFromSession()
     {
         $userdata = $this->session->all_userdata();
-        $userBusiness->getCurrentUser($userdata);
+        $this->currentUser = $this->userBusiness->getCurrentUser($userdata);
+        
     }
        
 }

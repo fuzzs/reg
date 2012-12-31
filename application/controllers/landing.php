@@ -14,11 +14,8 @@ class Landing extends RegloController
         
         $data['pageTitle'] = "Reglo.net";
         
-        $article = $this->articleBusiness->getArticleByID(1);
-        
-        $data['test'] = $article->Data->getContent();
         $data['loginForm'] = $login->showLoginForm();
-        //$data['test'] = APPPATH;
+        $data['test'] = sha1('bonjour');
         //$this->load->template('landingView', $data);
         
         $this->load->templateHeader('landingView', $data);

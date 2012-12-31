@@ -85,7 +85,7 @@ class User
     
     public function getHashedPassword() { return $this->Password; }
     
-    public function getEmail() { return $this->email; }
+    public function getEmail() { return $this->Email; }
     
     public function getLocale() { return $this->Locale; }
     

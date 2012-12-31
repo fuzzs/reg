@@ -1,3 +1,5 @@
+
+
 <?php
 
 foreach ($articles as $art)
@@ -11,5 +13,5 @@ foreach ($articles as $art)
     <div class="artListItemDate"><?= $art->getDate()->format('Y-m-d H:i:s');?></div>
 </div>
 
-<?php } ?>
+<?php } echo $user; ?>
 
