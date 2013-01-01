@@ -48,8 +48,12 @@
         });
     });
 </script>
+
+<?= $loginForm; ?>
+
+
 <div class="landingFrame">
-    <?= $loginForm; ?>
+    
     <div class="landingLoginFrame">
         <div class="defaultText">New comer?</div>
         <div class="fieldSeparator">

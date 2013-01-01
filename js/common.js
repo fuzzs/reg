@@ -13,6 +13,16 @@ function loginPost(email, password)
             // redirect vers la page de base.
             //window.location = "http://reglo.local/index.php/article/";
             $('#debug').html(data);
+            
+            if ($('#frmLoginMessage'))
+            {
+                $('#frmLoginMessage').append(data);
+            }
+            else
+            {
+                $("body").append(data);
+            }
+            
         }
     });
 }

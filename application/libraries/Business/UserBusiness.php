@@ -103,7 +103,6 @@ class UserBusiness extends BusinessBase
     
     public function disconnectUser()
     {
-        $this->session->sess_destroy();
         unset($this->currentUser);
     }
     

@@ -24,4 +24,5 @@
 <body>
 <div class="regloTitle">Reglo
     <span class="regloTitleEdition">Canada / Québec</span>
+    <span style="font-size: 10px;"><a href="http://reglo.local/index.php/logincontroller/logoff/" id="baseDisconnect">Disconnect</a></span>
 </div>

@@ -13,6 +13,29 @@ class LoginAjaxController extends Controls\LoginControl
     {
         parent::__construct();
     }
+    
+    public function login()
+    {
+        $email = $this->input->post("email");
+        $password = $this->input->post("password");
+        
+        $ret = $this->loginBase($email, $password);
+        
+        if ($ret->HasError)
+        {
+            $this->load->view('ajax/Error', $ret->Data);
+        }
+        else
+        {
+            $this->load->view('ajax/UserConnect.php', $ret->Data);
+        }
+        
+    }
+    
+    public function logoff()
+    {
+        $this->logoffBase();
+    }
 }
 
 ?>

@@ -12,6 +12,14 @@ class LoginControl extends \RegloController
         $this->showLoginForm();
     }
     
+    protected function init()
+    {
+        if ($this->userBusiness == null)
+        {
+             $this->userBusiness = new \Business\UserBusiness($this->doctrine);
+        }
+    }
+    
     public function showLoginForm()
     {
         $data['language'] = "English";
@@ -23,14 +31,12 @@ class LoginControl extends \RegloController
         
     }
     
-    public function login()
+    protected function loginBase($email, $password)
     {
         /* @var $ret \Business\RegloTransport */
         $ret = new \Business\RegloTransport();
         
-        $email = $this->input->post("email");
-        $password = $this->input->post("password");
-        $this->userBusiness = new \Business\UserBusiness($this->doctrine);
+        $this->init();
    
         $ret = $this->userBusiness->connectUser($email, $password);
         
@@ -41,14 +47,24 @@ class LoginControl extends \RegloController
         else
         {
             $ret->Message = "Wrong email or password";
+            $data['Message'] = $ret->Message;
+            $ret->Data = $data;
         }
         
-        return $ret->Message;
+        return $ret;
         
     }
     
-    public function disconnectUser()
+    protected function logoffBase()
     {
-        
+        $this->init();
+        $this->session->sess_destroy();
+        $this->userBusiness->disconnectUser();
+    }
+    
+    public function logoff()
+    {
+        $this->logoffBase();
+        $this->load->view("UserDisconnect", array());
     }
 }

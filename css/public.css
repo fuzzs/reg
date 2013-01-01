@@ -5,6 +5,8 @@
 /*beige clair #e6dac1*/
 /*bois foncé acajou #703e25*/
 /* vert foncé #555233 */
+/* gris background #dadada */
+/* gris ligne separant background #e8e8e8 */
 
 
 root { 
@@ -78,11 +80,32 @@ body {
 
 input.landing {
     font-size: 16px;
+    border: #98a1c3 solid 1px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    height: 24px;
 }
 
 .formLabel {
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
+    border-left: #98a1c3 solid 1px;
+    border-top: #98a1c3 solid 1px;
+    border-bottom: #98a1c3 solid 1px;
+    border-right: #e8e8e8 solid 1px;
+    border-radius: 3px 0px 0px 3px;
+    padding-top: 7px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 2px;
+    background-color: #dadada;
+    height: 20px;
+    display: inline-block;
+}
+
+.fieldAndLabel {
+    height: 28px;
+    display: inline-block;
 }
 
  .landingFrame {
@@ -99,7 +122,7 @@ input.landing {
 
 .landingLoginFrame {
     border: #555233 solid 1px;
-    background-color: #98a1c3;
+    background-color: #ffffff;
     border-radius: 4px 4px 4px 4px;
     width: auto;
     margin-left: auto;
@@ -115,13 +138,9 @@ input.landing {
 }
 
 input.loginButton {
-    border-top: #af7d3b solid 2px;
-    border-left: #af7d3b solid 2px;
-    border-bottom: #825513 solid 2px;
-    border-right: #825513 solid 2px;
-    border-radius: 4px 4px 4px 4px;
-    background-color: #ffd586;
-    font-size: 14px;
+    border: #000000 solid 2px;
+    background-color: #dadada;
+    font-size: 1+px;
     font-weight: bold;
     padding-bottom: 3px;
     height: 24px;

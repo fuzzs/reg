@@ -500,3 +500,5 @@ Stack trace:
 [31-Dec-2012 13:17:27] PHP Fatal error:  Call to a member function getAllArticles() on a non-object in D:\Projects\GitHub\reg\application\response\ArticleAjaxController.php on line 53
 [31-Dec-2012 13:30:47] PHP Fatal error:  Cannot access private property ArticleAjaxController::$numRec in D:\Projects\GitHub\reg\application\controllers\ArticleController.php on line 85
 [31-Dec-2012 13:31:11] PHP Fatal error:  Access level to ArticleAjaxController::$numRec must be protected (as in class ArticleController) or weaker in D:\Projects\GitHub\reg\application\response\ArticleAjaxController.php on line 9
+[31-Dec-2012 14:21:42] PHP Fatal error:  Call to a member function sess_destroy() on a non-object in D:\Projects\GitHub\reg\application\libraries\Business\UserBusiness.php on line 106
+[31-Dec-2012 14:23:46] PHP Fatal error:  Call to a member function load() on a non-object in D:\Projects\GitHub\reg\application\controllers\Controls\LoginControl.php on line 68
