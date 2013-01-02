@@ -11,11 +11,10 @@
     
     $(function()
     {
-        
+        $('#menuContext').html("<div id=\"articleHeaderHolder\" class=\"artHeaderHolder\"><div id=\"articleListHandle\" class=\"regloMenuItem artListHandle\"></div><div id=\"articleEditHandle\" class=\"regloMenuItem artEditHandle\"></div></div>");
         
         //$('#article01').hide(1000);
         //$('#articleList').animate({left: '-=200'}, 2000);
-        
         
         
         $('#articleListHandle').click(function(){
@@ -35,10 +34,6 @@
 
 
 <div class="artBase">
-    <div id="articleHeaderHolder" class="artHeaderHolder">
-        <div id="articleListHandle" class="artListHandle"></div>
-        <div id="articleEditHandle" class="artEditHandle"></div>
-    </div>
 
     <div id="articleList" class="artList">
 <!--        <div id="article01" class="artListItem">

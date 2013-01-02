@@ -33,4 +33,12 @@
             <div class="regloMenuItem">Dossiers</div>
             <div class="regloMenuItem">Organisations</div>
         </div>
+        
+        <div class="regloContextMenu" id="menuContext">
+        </div>
     </div>
+    <div class="regloSubMenuBar" id="subMenu">
+        
+    </div>
+    
+    <div class="regloContent" id="content">

@@ -5,5 +5,6 @@
  * and open the template in the editor.
  */
 ?>
+</div>
 </body>
 </html>
