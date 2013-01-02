@@ -22,7 +22,15 @@
         <script src="/js/jquery.movingboxes.js"></script>
     </head>
 <body>
-<div class="regloTitle">Reglo
-    <span class="regloTitleEdition">Canada / Québec</span>
-    <span style="font-size: 10px;"><a href="http://reglo.local/index.php/logincontroller/logoff/" id="baseDisconnect">Disconnect</a></span>
-</div>
+    <div class="regloHeader">
+        <div class="regloTitle"></div>
+        <span style="font-size: 10px;"><a href="http://reglo.local/index.php/logincontroller/logoff/" id="baseDisconnect">Disconnect</a></span>
+    </div>
+    <div class="regloMenuBar">
+        <div class="regloMenu">
+            <div class="regloMenuItem">Profile</div>
+            <div class="regloMenuItem">Articles</div>
+            <div class="regloMenuItem">Dossiers</div>
+            <div class="regloMenuItem">Organisations</div>
+        </div>
+    </div>

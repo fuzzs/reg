@@ -7,6 +7,7 @@
 /* vert foncé #555233 */
 /* gris background #dadada */
 /* gris ligne separant background #e8e8e8 */
+/* orange clair #f2951b */
 
 
 root { 
@@ -14,7 +15,7 @@ root {
 }
 
 body {
-    font-family: lucida grande,tahoma,verdana,arial,sans-serif;
+    font-family: helvetica,arial,tahoma,sans-serif;
     font-size: 12px;
     background-color: #ffffff;
     border: 0px;
@@ -57,17 +58,52 @@ body {
     border-width: 5px
 }
 
+.regloHeader{
+    background-color: #404863;
+    width: available;
+    height: 55px;
+}
 
 .regloTitle {
     font-size: 36px;
     font-weight: bold;
-    background-color: #404863;
-    width: available;
-    height: 50px;
+    color: #ffffff;
     font-family: Arial,Helvetica,sans-serif;
     padding-left: 10px;
-    padding-top: 5px;
-    color: #ffffff;
+    display: inline-block;
+    background-image: url("../images/reglologo.png");
+    background-repeat: no-repeat;
+    background-position: -3px -5px;
+    width: 150px;
+    height: 55px;
+    
+}
+
+.regloMenuBar{
+    background-color: #DADADA;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #C0C0C0;
+    width: 100%;
+}
+
+.regloMenu{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.regloMenuItem{
+    font-size: 16px;
+    font-weight: bold;
+    color: #666666;
+    display: inline-block;
+    padding: 5px 15px 5px 15px;
+    border-left: #e8e8e8 solid 1px;
+    border-right: #C0C0C0 solid 1px;
+    margin: 0px;
+    clear: none;
+    float: left;
 }
 
 .regloTitleEdition {
@@ -81,7 +117,10 @@ body {
 input.landing {
     font-size: 16px;
     border: #98a1c3 solid 1px;
+    background-color: #dadada;
     padding-top: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
     padding-bottom: 2px;
     height: 24px;
 }
@@ -93,12 +132,12 @@ input.landing {
     border-top: #98a1c3 solid 1px;
     border-bottom: #98a1c3 solid 1px;
     border-right: #e8e8e8 solid 1px;
-    border-radius: 3px 0px 0px 3px;
-    padding-top: 7px;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-bottom: 2px;
-    background-color: #dadada;
+    border-radius: 0px 0px 0px 0px;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 1px;
+    background-color: #f2951b;
     height: 20px;
     display: inline-block;
 }
@@ -106,6 +145,7 @@ input.landing {
 .fieldAndLabel {
     height: 28px;
     display: inline-block;
+    padding-right: 10px;
 }
 
  .landingFrame {
@@ -123,11 +163,11 @@ input.landing {
 .landingLoginFrame {
     border: #555233 solid 1px;
     background-color: #ffffff;
-    border-radius: 4px 4px 4px 4px;
     width: auto;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    padding: 5px; 
+    padding: 5px 0px 5px 5px; 
     display: inline-block;
     vertical-align: top;
     text-align: right;
@@ -138,25 +178,22 @@ input.landing {
 }
 
 input.loginButton {
-    border: #000000 solid 2px;
-    background-color: #dadada;
-    font-size: 1+px;
-    font-weight: bold;
+    border: #000000 solid 0px;
+    background-color: #f2951b;
+    font-size: 14px;
     padding-bottom: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
     height: 24px;
+    background-image: url(../images/arrow-right.png);
+    background-repeat: no-repeat;
+    background-position: 4px;
+    margin-top: 10px;
 }
 
 input.loginButton:active {
-    border-bottom: #af7d3b solid 2px;
-    border-right: #af7d3b solid 2px;
-    border-top: #825513 solid 2px;
-    border-left: #825513 solid 2px;
-    border-radius: 4px 4px 4px 4px;
+    border: #af7d3b solid 1px;
     background-color: #ffd586;
-    font-size: 14px;
-    font-weight: bold;
-    padding-bottom: 3px;
-    height: 24px;
 }
 
 .menuContainer {
@@ -223,37 +260,56 @@ input.loginButton:active {
 }
 
 .artListItem{
-    margin: 5px;
+    font-family: tahoma;
+    margin: 0px;
     padding: 2px;
-    border: 2px #555233 solid;
-    background-color: #ffd586;
+    border-top: 1px #c0c0c0 solid;
+    border-left: 1px #c0c0c0 solid;
+    border-bottom: 1px #f4f4f4 solid;
+    border-right: 1px #f4f4f4 solid;
+    background-color: #e8e8e8;
     position: relative;
 }
 
 .artListItemTitle{
-    font-size: 24px;
-    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 0px 5px 2px;
 }
 
 .artListItemAuthor{
-    font-size: 14px;
-    display: inline-block;
-    float: right; 
-    vertical-align: top;
+    font-size: 10px;
+    padding: 2px 0px 2px 2px;
+}
+
+b.artListItemAuthor{ 
+    color: #999999;
 }
 
 .artListItemDate{
-    font-size: 10px
+    font-size: 10px;
+    padding: 2px 0px 2px 2px;
+}
+
+b.artListItemDate{
+    color: #999999;
 }
 
 .artListItemArr{
     width: 20px; 
     height: 100%; 
-    border: #000 solid 2px; 
+    border-top: 1px #c0c0c0 solid;
+    border-left: 1px #c0c0c0 solid;
+    border-bottom: 1px #f4f4f4 solid;
+    border-right: 1px #f4f4f4 solid;
+    background-color: #f2951b;
     position: absolute; 
-    top: -2px; 
+    top: -1px; 
     left: 586px;
     cursor: pointer;
+    background-image: url(../images/arrow-right.png);
+    background-repeat: no-repeat;
+    background-position: 3px;
 }
 
 .artContainer{

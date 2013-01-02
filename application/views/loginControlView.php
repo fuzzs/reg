@@ -12,7 +12,6 @@ $(function()
 });
 </script>
     <div class="landingLoginFrame">
-        <div class="defaultText">Already a member</div>
         <div class="" style="display: inline-block">
         <div class="fieldAndLabel">
             <div class="formLabel">Email address</div><input class="landing" id="frmLoginEmail" type="text" size="20" />

@@ -12,11 +12,6 @@
     $(function()
     {
         
-        $('#slider').movingBoxes({
-            startPanel: 2,
-            wrap: false
-        })
-        
         
         //$('#article01').hide(1000);
         //$('#articleList').animate({left: '-=200'}, 2000);
@@ -38,15 +33,6 @@
     
 </script>
 
-<div class="menuContainer" >
-    <ul id="slider" >
-        <li>Account</li>
-        <li>Articles</li>
-        <li>Dossiers</li>
-        <li>ETc.</li>
-    </ul>
-   
-</div> 
 
 <div class="artBase">
     <div id="articleHeaderHolder" class="artHeaderHolder">
