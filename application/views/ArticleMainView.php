@@ -11,7 +11,7 @@
     
     $(function()
     {
-        $('#menuContext').html("<div id=\"articleHeaderHolder\" class=\"artHeaderHolder\"><div id=\"articleListHandle\" class=\"regloMenuItem artListHandle\"></div><div id=\"articleEditHandle\" class=\"regloMenuItem artEditHandle\"></div></div>");
+        $('#menuContext').html("<div class=\"regloContextMenuLabel\">Articles</div><div id=\"articleHeaderHolder\" class=\"artHeaderHolder\"><div id=\"articleListHandle\" class=\"regloMenuItem artListHandle\"></div><div id=\"articleEditHandle\" class=\"regloMenuItem artEditHandle\"></div></div>");
         
         //$('#article01').hide(1000);
         //$('#articleList').animate({left: '-=200'}, 2000);

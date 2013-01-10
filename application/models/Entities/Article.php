@@ -57,6 +57,30 @@ class Article
      */
     protected $User;
     
+    /**
+     * @ManyToOne(targetEntity="Country")
+     * @JoinColumn(name="CountryCode", referencedColumnName="Code")
+     */
+    protected $Country;
+    
+    /**
+     * @ManyToOne(targetEntity="Region")
+     * @JoinColumn(name="RegionId", referencedColumnName="Id")
+     */
+    protected $Region;
+    
+    /**
+     * @ManyToOne(targetEntity="ArticleType")
+     * @JoinColumn(name="ArticleTypeCode", referencedColumnName="Code")
+     */
+    protected $ArticleType;
+    
+    /**
+     * @ManyToOne(targetEntity="Language")
+     * @JoinColumn(name="LanguageCode", referencedColumnName="Code")
+     */
+    protected $Language;
+    
     public function __construct() 
     {
         $this->ArticleSegments = new \Doctrine\Common\Collections\ArrayCollection();
@@ -77,6 +101,14 @@ class Article
     public function getUser() { return $this->User; }
     
     public function getComments() { return $this->ArticleComments; }
+    
+    public function getCountry() { return $this->Country; }
+    
+    public function getRegion() { return $this->Region; }
+    
+    public function getArticleType() { return $this->ArticleType; }
+    
+    public function getLanguage() { return $this->Language; }
     
     public function createArticle($user, $articleTitle, $articleContent)
     {

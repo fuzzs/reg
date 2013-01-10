@@ -49,43 +49,18 @@
     });
 </script>
 
-<?= $loginForm; ?>
-
-
 <div class="landingFrame">
-    
-    <div class="landingLoginFrame">
-        <div class="defaultText">New comer?</div>
-        <div class="fieldSeparator">
-            <span class="formLabel">Email address: </span>
-            <input class="landing" type="text" size="20" />
-        </div>
-        <div class="fieldSeparator">
-            <span class="formLabel">First name: </span>
-            <input class="landing" type="text" size="20" />
-        </div>
-        <div class="fieldSeparator">
-            <span class="formLabel">Last name: </span>
-            <input class="landing" type="text" size="20" />
-        </div>
-        <div class="fieldSeparator">
-            <hr>
-        </div>
-        <div class="fieldSeparator">
-            <span class="formLabel">Country: </span>
-            <input class="landing" type="text" id="Countries" size="20" />
-        </div>
-        <div class="fieldSeparator">
-            <span class="formLabel" id="RegionName">State/Province: </span>
-            <input class="landing" type="text" id="Regions" size="20" />
-        </div>
-    </div>
+    <?= $loginForm; ?>
 </div>
+
+
+
+
 
 <a href="index.php/Article/">Article</a>
 
 <?= $test ?>
 
-<div id="#debug">
+<div id="debug">
     
 </div>
