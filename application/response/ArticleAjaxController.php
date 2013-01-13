@@ -64,9 +64,9 @@ class ArticleAjaxController extends ArticleController
         }
     }
     
-    public function getEditArticleForm()
+    public function getEditArticleForm($articleId = null)
     {
-        $ret = $this->getEditArticleFormBase();
+        $ret = $this->getEditArticleFormBase($articleId);
         $this->load->view("ajax\ArticleEdit", $ret->Data);
     }
         

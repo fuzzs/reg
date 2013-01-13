@@ -130,6 +130,37 @@ class ArticleBusiness extends BusinessBase
         
         return $ret;
     }
+    
+    public function saveArticle($articleId, $articleTitle, $articleContent)
+    {
+        $retArticle = $this->getArticleByID($articleId);
+        
+        /* var $article \Entities\Article */
+        $article = $retArticle->Data;
+        
+        $article->updateArticle($articleTitle, $articleContent);
+        
+        $this->em->persist($article);
+        $this->em->flush();
+        
+        $ret = new RegloTransport();
+        $ret->HasError = false;
+        $ret->Message = "OK";
+        
+        
+        return $ret;
+        
+    }
+    
+    /**
+     * 
+     * @param int $articleId
+     * @return boolean
+     */
+    public function userCanSaveArticle($articleId = null)
+    {
+        return $true;
+    }
 }
 
 ?>

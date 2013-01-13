@@ -127,7 +127,7 @@ class ArticleController extends RegloController
         return $ret;
     }
     
-    protected function getEditArticleFormBase()
+    protected function getEditArticleFormBase($articleId = null)
     {
         $ret = new \Business\RegloTransport();
         
@@ -135,6 +135,24 @@ class ArticleController extends RegloController
         //TODO: get sections list
         $data['dossiers'] = "";
         $data['sections'] = "";
+        
+        if ($articleId != null)
+        {
+            $this->init();
+            $article = $this->articleBusiness->getArticleByID($articleId);
+            if(!$article->HasError)
+            {
+                $data['articleTitle'] = $article->Data->getTitle();
+                $data['articleContent'] = $article->Data->getContent();
+                $data['articleId'] = $articleId;
+            }
+        }
+        else
+        {
+            $data['articleTitle'] = "";
+            $data['articleContent'] = "";
+            $data['articleId'] = "";
+        }
         
         $data['lbl'] = array( "art_post_button" => $this->lang->line('art_post_button'));
         $ret->HasError = false;
@@ -178,19 +196,36 @@ class ArticleController extends RegloController
     }
     
     
-    public function getEditArticleForm()
+    public function getEditArticleForm($articleId = null)
     {
-        $ret = $this->getEditArticleFormBase();
+        //$articleId = urldecode($this->input->post("articleid"));
+        //TODO: check if user can edit article
+        
+        
+        
+        $ret = $this->getEditArticleFormBase($articleId);
         $this->load->view("ArticleEdit", $ret->Data);
     }
     
-    public function addArticle()
+    public function saveArticle()
     {
         $articleTitle = urldecode($this->input->post("articleTitle"));
         $articleText = urldecode($this->input->post("articleText"));
+        $articleId = urldecode($this->input->post("articleId"));
+        
         
         $this->init();
-        $retValue = $this->articleBusiness->addArticle($articleTitle, $articleText);
+        
+        
+        
+        if ($articleId != null)
+        {
+            $retValue = $this->articleBusiness->saveArticle($articleId, $articleTitle, $articleText);
+        }
+        else
+        {
+            $retValue = $this->articleBusiness->addArticle($articleTitle, $articleText);
+        }
         
         return "cool";
     }

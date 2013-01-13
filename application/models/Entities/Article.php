@@ -118,6 +118,12 @@ class Article
         
         $this->ArticleDate = new \DateTime("now");
     }
+    
+    public function updateArticle($articleTitle, $articleContent)
+    {
+        $this->ArticleTitle = $articleTitle;
+        $this->ArticleContent = $articleContent;
+    }
 }
 
 ?>

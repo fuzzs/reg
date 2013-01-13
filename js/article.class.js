@@ -129,6 +129,12 @@ Article.showArticleDetail = function()
     $('#articleMenuComments').click(function(){
        art.getArticleComments(); 
     });
+    
+    $('#articleMenuEdit').unbind("click");
+    $('#articleMenuEdit').click(function(){
+       art.getArticleEdit(); 
+    });
+    
 }
 
 Article.hideArticleDetail = function()
@@ -259,13 +265,30 @@ Article.getEditArticleForm = function()
     });
 }
 
+Article.getArticleEdit = function()
+{
+    $.ajax({
+        url: "http://reglo.local/ajax.php/articleajaxcontroller/getEditArticleForm/" + this.articleID + "/",
+        context: document.body,
+        dataType: "html"
+    }).done(function(data){
+        $('#articleEditHolder').html(data);
+        art.changeViewState("edit", false);
+        
+        $('#frmArticlePost').unbind("click");
+        $('#frmArticlePost').click(function(){
+           art.postArticle(); 
+        });
+    });
+}
+
 Article.postArticle = function()
 {
-    formData = "articleTitle="+escape($('#frmArticleTitle').val())+"&articleText="+escape($('#frmArticleContent').val());
+    formData = "articleTitle="+escape($('#frmArticleTitle').val())+"&articleText="+escape($('#frmArticleContent').val())+"&articleId="+escape($('#frmArticleId').val());
     $('#debug').append(formData);
     
     $.ajax({
-        url: "http://reglo.local/ajax.php/articleajaxcontroller/addarticle/",
+        url: "http://reglo.local/ajax.php/articleajaxcontroller/savearticle/",
         type: "post",
         data: formData,
         context: document.body,

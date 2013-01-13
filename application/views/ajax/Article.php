@@ -13,8 +13,3 @@
     <div class="artDate"><?php echo $article->getDate()->format('Y-m-d H:i:s');?></div>
 </div>
 <div class="artContent"><?php echo $article->getContent();?></div>
-
-
-
-
-
