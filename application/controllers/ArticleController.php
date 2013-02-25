@@ -129,6 +129,7 @@ class ArticleController extends RegloController
     
     protected function getEditArticleFormBase($articleId = null)
     {
+        $hasError = false;
         $ret = new \Business\RegloTransport();
         
         //TODO: get dossier list
@@ -142,16 +143,26 @@ class ArticleController extends RegloController
             $article = $this->articleBusiness->getArticleByID($articleId);
             if(!$article->HasError)
             {
-                $data['articleTitle'] = $article->Data->getTitle();
-                $data['articleContent'] = $article->Data->getContent();
+                $data['article'] = $article->Data;
                 $data['articleId'] = $articleId;
+                $data['articleMenu'] = $this->getArticleMenu($articleId);
+            }
+            else
+            {
+                $hasError = true;
             }
         }
         else
         {
-            $data['articleTitle'] = "";
-            $data['articleContent'] = "";
+            $hasError = true;
+        }
+        
+        
+        if ($hasError)
+        {
+            $data['article'] = "";
             $data['articleId'] = "";
+            $data['articleMenu'] = $this->getArticleMenu();
         }
         
         $data['lbl'] = array( "art_post_button" => $this->lang->line('art_post_button'));
@@ -209,8 +220,8 @@ class ArticleController extends RegloController
     
     public function saveArticle()
     {
-        $articleTitle = urldecode($this->input->post("articleTitle"));
-        $articleText = urldecode($this->input->post("articleText"));
+        $articleTitle = RegloCommon::sanitizedHTMLString(urldecode($this->input->post("articleTitle")));
+        $articleText = RegloCommon::sanitizedHTMLString(urldecode($this->input->post("articleText")));
         $articleId = urldecode($this->input->post("articleId"));
         
         

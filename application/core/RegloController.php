@@ -36,5 +36,6 @@ class RegloController extends CI_Controller
         $this->currentUser = $this->userBusiness->getCurrentUser($userdata);
         
     }
+    
        
 }

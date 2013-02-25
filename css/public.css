@@ -508,7 +508,7 @@ b.artListItemDate{
 }
 
 .artContent {
-    font-size: 16px;
+    font-size: 12px;
     border: #404863 solid 1px;
     padding: 2px;
 }
@@ -612,9 +612,10 @@ textarea.taArticle {
     font-size: 12px;
     width: 550px;
     height: 300px;
+    overflow: auto;
 }
 
-input.article {
-    font-size: 14px;
+input.articleTitle {
+    font-size: 24px;
     width: 550px;
 }

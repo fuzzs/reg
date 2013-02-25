@@ -63,7 +63,7 @@ $autoload['libraries'] = array('Doctrine', 'RegloBusiness', 'session');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array();
+$autoload['helper'] = array('RegloCommon');
 
 
 /*

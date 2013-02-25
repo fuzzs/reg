@@ -18,7 +18,7 @@
         
         
         $('#articleListHandle').click(function(){
-            art.changeViewState("list", false);
+            art.getArticleList(art.currPage);
         });
         
         $('#articleEditHandle').click(function(){

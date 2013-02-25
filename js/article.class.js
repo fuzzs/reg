@@ -9,9 +9,13 @@ function Article()
     var articleViewState; // supports states: list, detail, edit
     var currTargetState;
     var toSelf;
+    var articleContent;
+    var articleTitle;
+    var currPage;
     
     return Article;
 }
+
 
 Article.setSelf = function (article)
 {
@@ -89,6 +93,19 @@ Article.changeViewState = function (targetState, isCallback)
                 art.hideArticleEdit();
             }
         }
+        else if (art.articleViewState == "edit" && targetState == "detail")
+        {
+            if (isCallback)
+            {
+                art.articleViewState = targetState;
+                art.currTargetState = "";
+                art.showArticleDetail();
+            }
+            else
+            {
+                art.hideArticleEdit();
+            }
+        }
         else
         {
             art.articleViewState = "list";
@@ -155,6 +172,16 @@ Article.hideArticleDetailCallback = function()
 Article.showArticleEdit = function()
 {
     $('#articleEditHolder').show("fade", {}, 200);
+    
+    $('#articleMenuComments').unbind("click");
+    $('#articleMenuComments').click(function(){
+       art.getArticleComments(); 
+    });
+    
+    $('#articleMenuEdit').unbind("click");
+    $('#articleMenuEdit').click(function(){
+       art.getArticleDetail(); 
+    });
 }
 
 Article.hideArticleEdit = function()
@@ -169,6 +196,8 @@ Article.hideArticleEditCallback = function()
 
 Article.getArticleList = function (page)
 {   
+    this.currPage = page;
+    
     $.ajax({
         url: "http://reglo.local/ajax.php/articleajaxcontroller/getarticlelist/" + page + "/",
         context: document.body,
@@ -231,7 +260,7 @@ Article.getArticleComments = function()
     
 Article.postArticleComment = function()
 {
-    formData = "articleID="+this.articleID+"&commentText="+ escape($('#articleCommentorText').val());
+    formData = "articleID="+this.articleID+"&commentText="+ encodeURIComponent($('#articleCommentorText').val());
     $('#debug').append(formData);
 
     $.ajax({
@@ -284,7 +313,7 @@ Article.getArticleEdit = function()
 
 Article.postArticle = function()
 {
-    formData = "articleTitle="+escape($('#frmArticleTitle').val())+"&articleText="+escape($('#frmArticleContent').val())+"&articleId="+escape($('#frmArticleId').val());
+    formData = "articleTitle="+encodeURIComponent($('#frmArticleTitle').val())+"&articleText="+encodeURIComponent(theEditor.instanceById('frmArticleContent').getContent())+"&articleId="+escape($('#frmArticleId').val());
     $('#debug').append(formData);
     
     $.ajax({
@@ -300,6 +329,5 @@ Article.postArticle = function()
         }
     });
 }
-
 
 var art = new Article();

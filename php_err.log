@@ -504,3 +504,50 @@ Stack trace:
 [31-Dec-2012 14:23:46] PHP Fatal error:  Call to a member function load() on a non-object in D:\Projects\GitHub\reg\application\controllers\Controls\LoginControl.php on line 68
 [12-Jan-2013 10:21:13] PHP Fatal error:  Call to a member function getArticleByID() on a non-object in D:\Projects\GitHub\reg\application\controllers\ArticleController.php on line 141
 [12-Jan-2013 10:22:16] PHP Fatal error:  Call to undefined method Entities\Article::getArticleTitle() in D:\Projects\GitHub\reg\application\controllers\ArticleController.php on line 145
+[13-Jan-2013 16:07:12] PHP Parse error:  syntax error, unexpected T_VARIABLE in D:\Projects\GitHub\reg\application\controllers\ArticleController.php on line 214
+[13-Jan-2013 16:07:12] PHP Stack trace:
+[13-Jan-2013 16:07:12] PHP   1. {main}() D:\Projects\GitHub\reg\ajax.php:0
+[13-Jan-2013 16:07:12] PHP   2. require_once() D:\Projects\GitHub\reg\ajax.php:255
+[13-Jan-2013 16:07:12] PHP   3. call_user_func_array(*uninitialized*, *uninitialized*) D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[13-Jan-2013 16:07:12] PHP   4. AjaxController->main() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[13-Jan-2013 16:07:12] PHP   5. require_once() D:\Projects\GitHub\reg\application\controllers\AjaxController.php:7
+[13-Jan-2013 16:07:12] PHP   6. ajax->ajax($controller = *uninitialized*) D:\Projects\GitHub\reg\ajaxfw.php:263
+[13-Jan-2013 16:07:12] PHP   7. ajax->_files($controller = *uninitialized*, $alt_controller = *uninitialized*) D:\Projects\GitHub\reg\ajaxfw.php:77
+[13-Jan-2013 16:07:12] PHP   8. require_once() D:\Projects\GitHub\reg\ajaxfw.php:151
+[13-Jan-2013 16:17:30] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'ArticleTitle' cannot be null' in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php:142
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\Statement.php(142): PDOStatement->execute(NULL)
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php(274): Doctrine\DBAL\Statement->execute()
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(922): Doctrine\ORM\Persisters\BasicEntityPersister->executeInserts()
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php(313): Doctrine\ORM\UnitOfWork->executeInserts(Object(Doctrine\ORM\Mapping\ClassMetadata))
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php(356): Doctrine\ORM\UnitOfWork->commit(NULL)
+#5 D:\Projects\GitHub\reg\application\libraries\Business\ArticleBusiness.php(126): Doctrine\ORM\EntityManager in D:\Projects\GitHub\reg\application\libraries\Doctrine\DBAL\DBALException.php on line 47
+[24-Feb-2013 23:16:30] PHP Fatal error:  Cannot redeclare class Entities\UserSubscription in D:\Projects\GitHub\reg\application\models\Entities\UserSubscriber.php on line 10
+[24-Feb-2013 23:16:30] PHP Stack trace:
+[24-Feb-2013 23:16:30] PHP   1. {main}() D:\Projects\GitHub\reg\ajax.php:0
+[24-Feb-2013 23:16:30] PHP   2. require_once() D:\Projects\GitHub\reg\ajax.php:255
+[24-Feb-2013 23:16:30] PHP   3. call_user_func_array() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[24-Feb-2013 23:16:30] PHP   4. AjaxController->main() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[24-Feb-2013 23:16:30] PHP   5. require_once() D:\Projects\GitHub\reg\application\controllers\AjaxController.php:7
+[24-Feb-2013 23:16:30] PHP   6. ajax->ajax() D:\Projects\GitHub\reg\ajaxfw.php:263
+[24-Feb-2013 23:16:30] PHP   7. call_user_func_array() D:\Projects\GitHub\reg\ajaxfw.php:115
+[24-Feb-2013 23:16:30] PHP   8. ArticleAjaxController->getArticle() D:\Projects\GitHub\reg\ajaxfw.php:115
+[24-Feb-2013 23:16:30] PHP   9. CI_Loader->view() D:\Projects\GitHub\reg\application\response\ArticleAjaxController.php:30
+[24-Feb-2013 23:16:30] PHP  10. CI_Loader->_ci_load() D:\Projects\GitHub\reg\system\core\Loader.php:419
+[24-Feb-2013 23:16:30] PHP  11. include() D:\Projects\GitHub\reg\system\core\Loader.php:833
+[24-Feb-2013 23:16:30] PHP  12. Proxies\__CG__\Entities\User->getFirstname() D:\Projects\GitHub\reg\application\views\ajax\Article.php:12
+[24-Feb-2013 23:16:30] PHP  13. Proxies\__CG__\Entities\User->__load() D:\Projects\GitHub\reg\application\models\Proxies\__CG__EntitiesUser.php:59
+[24-Feb-2013 23:16:30] PHP  14. Doctrine\ORM\Persisters\BasicEntityPersister->load() D:\Projects\GitHub\reg\application\models\Proxies\__CG__EntitiesUser.php:31
+[24-Feb-2013 23:16:30] PHP  15. Doctrine\ORM\Internal\Hydration\AbstractHydrator->hydrateAll() D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Persisters\BasicEntityPersister.php:710
+[24-Feb-2013 23:16:30] PHP  16. Doctrine\ORM\Internal\Hydration\SimpleObjectHydrator->hydrateAllData() D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Internal\Hydration\AbstractHydrator.php:111
+[24-Feb-2013 23:16:30] PHP  17. Doctrine\ORM\Internal\Hydration\SimpleObjectHydrator->hydrateRowData() D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Internal\Hydration\SimpleObjectHydrator.php:50
+[24-Feb-2013 23:16:30] PHP  18. Doctrine\ORM\UnitOfWork->createEntity() D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Internal\Hydration\SimpleObjectHydrator.php:135
+[24-Feb-2013 23:16:30] PHP  19. Doctrine\ORM\EntityManager->getClassMetadata() D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\UnitOfWork.php:2482
+[24-Feb-2013 23:16:30] PHP  20. Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->getMetadataFor() D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\EntityManager.php:269
+[24-Feb-2013 23:16:30] PHP  21. Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory->loadMetadata() D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php:205
+[24-Feb-2013 23:16:30] PHP  22. Doctrine\ORM\Mapping\ClassMetadataFactory->initializeReflection() D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\AbstractClassMetadataFactory.php:300
+[24-Feb-2013 23:16:30] PHP  23. Doctrine\ORM\Mapping\ClassMetadataInfo->initializeReflection() D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataFactory.php:511
+[24-Feb-2013 23:16:30] PHP  24. Doctrine\Common\Persistence\Mapping\RuntimeReflectionService->getClass() D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Mapping\ClassMetadataInfo.php:867
+[24-Feb-2013 23:16:30] PHP  25. ReflectionClass->__construct() D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php:73
+[24-Feb-2013 23:16:30] PHP  26. Doctrine\Common\ClassLoader->loadClass() D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php:0
+[24-Feb-2013 23:16:30] PHP  27. require() D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php:163

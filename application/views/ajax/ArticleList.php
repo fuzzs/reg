@@ -1,5 +1,5 @@
 
-
+<br>
 <?php
 
 foreach ($articles as $art)

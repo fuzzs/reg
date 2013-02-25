@@ -46,6 +46,11 @@ class Article
     protected $ArticleSectors;
     
     /**
+     * @OneToMany(targetEntity="ArticleVote", mappedBy="Article")
+     */
+    protected $ArticleVotes;
+    
+    /**
      * @ManyToOne(targetEntity="Dossier")
      * @JoinColumn(name="DossierId", referencedColumnName="Id")
      */

@@ -38,6 +38,11 @@ class User
     protected $Region;
     
     /**
+     * @OneToMany(targetEntity="UserSubscriber", mappedBy="User")
+     */
+    protected $UserSubscriptions;
+    
+    /**
      * @Column(type="string", length=120, unique=true, nullable=false)
      */
     protected $Username;

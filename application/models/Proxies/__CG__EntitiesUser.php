@@ -105,7 +105,7 @@ class User extends \Entities\User implements \Doctrine\ORM\Proxy\Proxy
 
     public function __sleep()
     {
-        return array('__isInitialized__', 'Id', 'Username', 'Firstname', 'Lastname', 'Email', 'Password', 'FacebookKey', 'Locale', 'UserRoles', 'UserLogins', 'Country', 'Region');
+        return array('__isInitialized__', 'Id', 'Username', 'Firstname', 'Lastname', 'Email', 'Password', 'FacebookKey', 'Locale', 'UserRoles', 'UserLogins', 'Country', 'Region', 'UserSubscriptions');
     }
 
     public function __clone()
