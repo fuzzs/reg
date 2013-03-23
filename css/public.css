@@ -284,6 +284,7 @@ input.helptext{
 .landingLoginFrameRG{
     float: inherit;
     height: 100%;
+    cursor: pointer;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 3px 0px 0px 0;
@@ -425,7 +426,7 @@ input.loginButton:active {
     border-left: 1px #c0c0c0 solid;
     border-bottom: 1px #f4f4f4 solid;
     border-right: 1px #f4f4f4 solid;
-    background-color: #e8e8e8;
+    background-color: #ffffff;
     position: relative;
 }
 
@@ -618,4 +619,27 @@ textarea.taArticle {
 input.articleTitle {
     font-size: 24px;
     width: 550px;
+}
+
+/**************************/
+/* Subs styles */
+/**************************/
+
+.subsList {
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    float: left;
+}
+
+.subsListItem{
+    font-family: tahoma;
+    margin: 0px;
+    padding: 2px;
+    border-top: 1px #c0c0c0 solid;
+    border-left: 1px #c0c0c0 solid;
+    border-bottom: 1px #f4f4f4 solid;
+    border-right: 1px #f4f4f4 solid;
+    background-color: #ffffff;
+    position: relative;
 }

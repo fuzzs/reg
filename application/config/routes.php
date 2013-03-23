@@ -45,6 +45,15 @@ $route['article/(:any)'] = "ArticleController/main";
 $route['article'] = "ArticleController/main";
 $route['Article'] = "ArticleController/main";
 
+$route['profile/(:any)'] = "UserController/Profile";
+$route['profile'] = "UserController/Profile";
+$route['Profile'] = "UserController/Profile";
+
+$route['register/(:any)'] = "UserController/Register";
+$route['register'] = "UserController/Register";
+$route['Register'] = "UserController/Register";
+
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

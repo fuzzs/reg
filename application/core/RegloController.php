@@ -1,23 +1,31 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 //require_once APPPATH.'models\Entities\Article.php';
 
+/**
+ * @name RegloController
+ */
 class RegloController extends CI_Controller 
 {
     protected $locale;
     protected $df;
     
-    /* @var $userBusiness Business\UserBusiness */
+    /** 
+     * UserBusiness instance for all related access control uses
+     * @var Business\UserBusiness 
+     */
     protected $userBusiness;
     
-    /* @var $currentUser Entities\User */
+    /** 
+     * Get the current connected user
+     * @var Entities\User 
+     */
     protected $currentUser;
     
+    /**
+     * Constructor
+     */
     function __construct()
     {
         parent::__construct();
@@ -30,6 +38,10 @@ class RegloController extends CI_Controller
         $this->getUserFromSession();
     }
     
+    /**
+     * To be moved in business layer
+     * Gets the user from the session
+     */
     public function getUserFromSession()
     {
         $userdata = $this->session->all_userdata();

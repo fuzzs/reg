@@ -32,36 +32,6 @@ class UserBusiness extends BusinessBase
         $this->em = $doctrine->getEntityManager();
     }
     
-    /**
-     * @param integer $userID
-     * @return RegloTransport
-     */
-    public function getUserByID($userID)
-    {
-        $dql = "SELECT u FROM Entities\User u WHERE u.id = :userid";
-        $query = $this->em->createQuery($dql);
-        $query->setParameters(array(
-            'userid' => $userID
-        ));
-        
-        $ret = $query->getResult();
-        
-        return $ret;
-    }
-    
-    public function getCurrentUser($userdata)       
-    {
-        if ($userdata != null && array_key_exists('userid', $userdata))
-        {
-            $this->currentUser = $this->em->find("Entities\User", $userdata['userid']);
-        }
-        else
-        {
-            $this->currentUser = new \Entities\User();
-        }
-        
-        return $this->currentUser;
-    }
     
     public function connectUser($email, $password)
     {
@@ -80,7 +50,8 @@ class UserBusiness extends BusinessBase
                 $userdata = array(
                     'username' => $this->currentUser->getUsername(),
                     'email' => $this->currentUser->getEmail(),
-                    'userid' => $this->currentUser->getId()
+                    'userid' => $this->currentUser->getId(),
+                    'hash' => sha1($this->currentUser->getEmail() . $this->currentUser->getId() . $this->secStr)
                 );
                 
                 $ret->Data = $userdata;
@@ -101,6 +72,23 @@ class UserBusiness extends BusinessBase
         return $ret;
     }
     
+    public function getSubscribers()
+    {
+        $ret = new RegloTransport();
+        
+        if ($this->isUserConnected())
+        {
+            $ret->Data = $this->currentUser->getUserSubscribers();
+            $ret->HasError = false;
+        }
+        else
+        {
+            $ret->Data = "";
+            $ret->HasError = true;
+            $ret->Message = "User is not connected";
+        }
+    }
+    
     public function disconnectUser()
     {
         unset($this->currentUser);
@@ -109,6 +97,42 @@ class UserBusiness extends BusinessBase
     public function addFailedLogin()
     {
         
+    }
+    
+    /**
+     * Gets the view mode for the profile. 
+     * 1 = Editmode for current user
+     * 2 = Readmode for any connected user
+     * 3 = CreationMode for new user and unconnected
+     * @param int $userID
+     * @return int
+     */
+    public function getProfileRightMode($userID = null)
+    {
+        $profileModeView = 0;
+        
+        if ($this->isUserConnected())
+        {
+            // shows the edit form for the user if it's the currentuser
+            if ($userID != null && $userID == $this->currentUser->getId())
+            {
+                // shows the edit form
+                $profileModeView = 1;
+            }
+            else
+            {
+                // shows the view profile form
+                $profileModeView = 2;
+            }
+                
+        }
+        else
+        {
+            // shows the create profile form
+            $profileModeView = 3;
+        }
+        
+        return $profileModeView;
     }
 }
 

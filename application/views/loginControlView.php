@@ -18,14 +18,26 @@ $(function()
         this.parentElement.children[0].style.display = "";
                 
     });
+    
+    $('#ldngRegister').click(function(){
+        $.ajax({
+            url: "http://reglo.local/ajax.php/userajaxcontroller/register/",
+            context: document.body,
+            dataType: "html"
+        }).done(function(data){
+            $('#ldngLoginFrame').html(data);
+        });
+        
+        
+    });
 });
 </script>
 
-    <div class="landingLoginFrame">
+    <div class="landingLoginFrame" id="ldngLoginFrame">
         <div style="height: 60px; background-color: #ffffff;"></div>
         <div class="landingLoginFrameHeader">
-            <div class="landingLoginFrameAM">Already a member</div>
-            <div class="landingLoginFrameRG">Register</div>
+            <div class="landingLoginFrameAM" id="ldngMember">Already a member</div>
+            <div class="landingLoginFrameRG" id="ldngRegister">Register</div>
         </div>
         
         <div class="landingLoginFrameFB">

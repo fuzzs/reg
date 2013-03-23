@@ -33,11 +33,9 @@ class LoginControl extends \RegloController
     
     protected function loginBase($email, $password)
     {
-        /* @var $ret \Business\RegloTransport */
-        $ret = new \Business\RegloTransport();
-        
         $this->init();
    
+        /* @var $ret \Business\RegloTransport */
         $ret = $this->userBusiness->connectUser($email, $password);
         
         if (!$ret->HasError)

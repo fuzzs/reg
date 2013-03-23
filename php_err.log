@@ -551,3 +551,158 @@ Stack trace:
 [24-Feb-2013 23:16:30] PHP  25. ReflectionClass->__construct() D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php:73
 [24-Feb-2013 23:16:30] PHP  26. Doctrine\Common\ClassLoader->loadClass() D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService.php:0
 [24-Feb-2013 23:16:30] PHP  27. require() D:\Projects\GitHub\reg\application\libraries\Doctrine\Common\ClassLoader.php:163
+[25-Feb-2013 21:22:28] PHP Fatal error:  Call to a member function getDossier() on a non-object in D:\Projects\GitHub\reg\application\views\ajax\ArticleEdit.php on line 6
+[25-Feb-2013 21:22:28] PHP Stack trace:
+[25-Feb-2013 21:22:28] PHP   1. {main}() D:\Projects\GitHub\reg\ajax.php:0
+[25-Feb-2013 21:22:28] PHP   2. require_once() D:\Projects\GitHub\reg\ajax.php:255
+[25-Feb-2013 21:22:28] PHP   3. call_user_func_array() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[25-Feb-2013 21:22:28] PHP   4. AjaxController->main() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[25-Feb-2013 21:22:28] PHP   5. require_once() D:\Projects\GitHub\reg\application\controllers\AjaxController.php:7
+[25-Feb-2013 21:22:28] PHP   6. ajax->ajax() D:\Projects\GitHub\reg\ajaxfw.php:263
+[25-Feb-2013 21:22:28] PHP   7. call_user_func_array() D:\Projects\GitHub\reg\ajaxfw.php:115
+[25-Feb-2013 21:22:28] PHP   8. ArticleAjaxController->getEditArticleForm() D:\Projects\GitHub\reg\ajaxfw.php:115
+[25-Feb-2013 21:22:28] PHP   9. CI_Loader->view() D:\Projects\GitHub\reg\application\response\ArticleAjaxController.php:70
+[25-Feb-2013 21:22:28] PHP  10. CI_Loader->_ci_load() D:\Projects\GitHub\reg\system\core\Loader.php:419
+[25-Feb-2013 21:22:28] PHP  11. include() D:\Projects\GitHub\reg\system\core\Loader.php:833
+[25-Feb-2013 21:58:43] PHP Fatal error:  Class 'UserController' not found in D:\Projects\GitHub\reg\application\response\UserAjaxController.php on line 9
+[25-Feb-2013 21:58:43] PHP Stack trace:
+[25-Feb-2013 21:58:43] PHP   1. {main}() D:\Projects\GitHub\reg\ajax.php:0
+[25-Feb-2013 21:58:43] PHP   2. require_once() D:\Projects\GitHub\reg\ajax.php:255
+[25-Feb-2013 21:58:43] PHP   3. call_user_func_array() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[25-Feb-2013 21:58:43] PHP   4. AjaxController->main() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[25-Feb-2013 21:58:43] PHP   5. require_once() D:\Projects\GitHub\reg\application\controllers\AjaxController.php:7
+[25-Feb-2013 21:58:43] PHP   6. ajax->ajax() D:\Projects\GitHub\reg\ajaxfw.php:263
+[25-Feb-2013 21:58:43] PHP   7. ajax->_files() D:\Projects\GitHub\reg\ajaxfw.php:77
+[25-Feb-2013 21:58:43] PHP   8. require_once() D:\Projects\GitHub\reg\ajaxfw.php:151
+[25-Feb-2013 21:59:27] PHP Fatal error:  Call to undefined method Business\UserBusiness::getSubscribers() in D:\Projects\GitHub\reg\application\controllers\UserController.php on line 31
+[25-Feb-2013 21:59:27] PHP Stack trace:
+[25-Feb-2013 21:59:27] PHP   1. {main}() D:\Projects\GitHub\reg\ajax.php:0
+[25-Feb-2013 21:59:27] PHP   2. require_once() D:\Projects\GitHub\reg\ajax.php:255
+[25-Feb-2013 21:59:27] PHP   3. call_user_func_array() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[25-Feb-2013 21:59:27] PHP   4. AjaxController->main() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[25-Feb-2013 21:59:27] PHP   5. require_once() D:\Projects\GitHub\reg\application\controllers\AjaxController.php:7
+[25-Feb-2013 21:59:27] PHP   6. ajax->ajax() D:\Projects\GitHub\reg\ajaxfw.php:263
+[25-Feb-2013 21:59:27] PHP   7. call_user_func_array() D:\Projects\GitHub\reg\ajaxfw.php:115
+[25-Feb-2013 21:59:27] PHP   8. UserAjaxController->getSubscribers() D:\Projects\GitHub\reg\ajaxfw.php:115
+[25-Feb-2013 21:59:27] PHP   9. UserController->getSubscribersBase() D:\Projects\GitHub\reg\application\response\UserAjaxController.php:19
+[25-Feb-2013 22:00:03] PHP Fatal error:  Call to undefined method Business\UserBusiness::getSubscribers() in D:\Projects\GitHub\reg\application\controllers\UserController.php on line 28
+[25-Feb-2013 22:00:03] PHP Stack trace:
+[25-Feb-2013 22:00:03] PHP   1. {main}() D:\Projects\GitHub\reg\ajax.php:0
+[25-Feb-2013 22:00:03] PHP   2. require_once() D:\Projects\GitHub\reg\ajax.php:255
+[25-Feb-2013 22:00:03] PHP   3. call_user_func_array() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[25-Feb-2013 22:00:03] PHP   4. AjaxController->main() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[25-Feb-2013 22:00:03] PHP   5. require_once() D:\Projects\GitHub\reg\application\controllers\AjaxController.php:7
+[25-Feb-2013 22:00:03] PHP   6. ajax->ajax() D:\Projects\GitHub\reg\ajaxfw.php:263
+[25-Feb-2013 22:00:03] PHP   7. call_user_func_array() D:\Projects\GitHub\reg\ajaxfw.php:115
+[25-Feb-2013 22:00:03] PHP   8. UserAjaxController->getSubscribers() D:\Projects\GitHub\reg\ajaxfw.php:115
+[25-Feb-2013 22:00:03] PHP   9. UserController->getSubscribersBase() D:\Projects\GitHub\reg\application\response\UserAjaxController.php:19
+[25-Feb-2013 22:00:58] PHP Fatal error:  Call to undefined method Business\UserBusiness::getSubscribers() in D:\Projects\GitHub\reg\application\controllers\UserController.php on line 28
+[25-Feb-2013 22:00:58] PHP Stack trace:
+[25-Feb-2013 22:00:58] PHP   1. {main}() D:\Projects\GitHub\reg\ajax.php:0
+[25-Feb-2013 22:00:58] PHP   2. require_once() D:\Projects\GitHub\reg\ajax.php:255
+[25-Feb-2013 22:00:58] PHP   3. call_user_func_array() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[25-Feb-2013 22:00:58] PHP   4. AjaxController->main() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[25-Feb-2013 22:00:58] PHP   5. require_once() D:\Projects\GitHub\reg\application\controllers\AjaxController.php:7
+[25-Feb-2013 22:00:58] PHP   6. ajax->ajax() D:\Projects\GitHub\reg\ajaxfw.php:263
+[25-Feb-2013 22:00:58] PHP   7. call_user_func_array() D:\Projects\GitHub\reg\ajaxfw.php:115
+[25-Feb-2013 22:00:58] PHP   8. UserAjaxController->getSubscribers() D:\Projects\GitHub\reg\ajaxfw.php:115
+[25-Feb-2013 22:00:58] PHP   9. UserController->getSubscribersBase() D:\Projects\GitHub\reg\application\response\UserAjaxController.php:19
+[01-Mar-2013 21:30:07] PHP Parse error:  syntax error, unexpected T_IF in D:\Projects\GitHub\reg\application\views\ArticleMainView.php on line 79
+[01-Mar-2013 21:30:07] PHP Stack trace:
+[01-Mar-2013 21:30:07] PHP   1. {main}() D:\Projects\GitHub\reg\index.php:0
+[01-Mar-2013 21:30:07] PHP   2. require_once() D:\Projects\GitHub\reg\index.php:202
+[01-Mar-2013 21:30:07] PHP   3. call_user_func_array() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[01-Mar-2013 21:30:07] PHP   4. ArticleController->main() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[01-Mar-2013 21:30:07] PHP   5. CI_Loader->view() D:\Projects\GitHub\reg\application\controllers\ArticleController.php:44
+[01-Mar-2013 21:30:07] PHP   6. CI_Loader->_ci_load() D:\Projects\GitHub\reg\system\core\Loader.php:419
+[01-Mar-2013 21:30:21] PHP Parse error:  syntax error, unexpected T_IF in D:\Projects\GitHub\reg\application\views\ArticleMainView.php on line 79
+[01-Mar-2013 21:30:21] PHP Stack trace:
+[01-Mar-2013 21:30:21] PHP   1. {main}() D:\Projects\GitHub\reg\index.php:0
+[01-Mar-2013 21:30:21] PHP   2. require_once() D:\Projects\GitHub\reg\index.php:202
+[01-Mar-2013 21:30:21] PHP   3. call_user_func_array() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[01-Mar-2013 21:30:21] PHP   4. ArticleController->main() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[01-Mar-2013 21:30:21] PHP   5. CI_Loader->view() D:\Projects\GitHub\reg\application\controllers\ArticleController.php:44
+[01-Mar-2013 21:30:21] PHP   6. CI_Loader->_ci_load() D:\Projects\GitHub\reg\system\core\Loader.php:419
+[01-Mar-2013 21:30:22] PHP Parse error:  syntax error, unexpected T_IF in D:\Projects\GitHub\reg\application\views\ArticleMainView.php on line 79
+[01-Mar-2013 21:30:22] PHP Stack trace:
+[01-Mar-2013 21:30:22] PHP   1. {main}() D:\Projects\GitHub\reg\index.php:0
+[01-Mar-2013 21:30:22] PHP   2. require_once() D:\Projects\GitHub\reg\index.php:202
+[01-Mar-2013 21:30:22] PHP   3. call_user_func_array() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[01-Mar-2013 21:30:22] PHP   4. ArticleController->main() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[01-Mar-2013 21:30:22] PHP   5. CI_Loader->view() D:\Projects\GitHub\reg\application\controllers\ArticleController.php:44
+[01-Mar-2013 21:30:22] PHP   6. CI_Loader->_ci_load() D:\Projects\GitHub\reg\system\core\Loader.php:419
+[01-Mar-2013 21:44:47] PHP Fatal error:  Call to a member function getDossier() on a non-object in D:\Projects\GitHub\reg\application\views\ajax\ArticleEdit.php on line 6
+[01-Mar-2013 21:44:47] PHP Stack trace:
+[01-Mar-2013 21:44:47] PHP   1. {main}() D:\Projects\GitHub\reg\ajax.php:0
+[01-Mar-2013 21:44:47] PHP   2. require_once() D:\Projects\GitHub\reg\ajax.php:255
+[01-Mar-2013 21:44:47] PHP   3. call_user_func_array() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[01-Mar-2013 21:44:47] PHP   4. AjaxController->main() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[01-Mar-2013 21:44:47] PHP   5. require_once() D:\Projects\GitHub\reg\application\controllers\AjaxController.php:7
+[01-Mar-2013 21:44:47] PHP   6. ajax->ajax() D:\Projects\GitHub\reg\ajaxfw.php:263
+[01-Mar-2013 21:44:47] PHP   7. call_user_func_array() D:\Projects\GitHub\reg\ajaxfw.php:115
+[01-Mar-2013 21:44:47] PHP   8. ArticleAjaxController->getEditArticleForm() D:\Projects\GitHub\reg\ajaxfw.php:115
+[01-Mar-2013 21:44:47] PHP   9. CI_Loader->view() D:\Projects\GitHub\reg\application\response\ArticleAjaxController.php:70
+[01-Mar-2013 21:44:47] PHP  10. CI_Loader->_ci_load() D:\Projects\GitHub\reg\system\core\Loader.php:419
+[01-Mar-2013 21:44:47] PHP  11. include() D:\Projects\GitHub\reg\system\core\Loader.php:833
+[03-Mar-2013 22:24:45] PHP Fatal error:  Call to undefined method Entities\User::getSubscribers() in D:\Projects\GitHub\reg\application\libraries\Business\UserBusiness.php on line 80
+[03-Mar-2013 22:24:45] PHP Stack trace:
+[03-Mar-2013 22:24:45] PHP   1. {main}() D:\Projects\GitHub\reg\ajax.php:0
+[03-Mar-2013 22:24:45] PHP   2. require_once() D:\Projects\GitHub\reg\ajax.php:255
+[03-Mar-2013 22:24:45] PHP   3. call_user_func_array() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[03-Mar-2013 22:24:45] PHP   4. AjaxController->main() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[03-Mar-2013 22:24:45] PHP   5. require_once() D:\Projects\GitHub\reg\application\controllers\AjaxController.php:7
+[03-Mar-2013 22:24:45] PHP   6. ajax->ajax() D:\Projects\GitHub\reg\ajaxfw.php:263
+[03-Mar-2013 22:24:45] PHP   7. call_user_func_array() D:\Projects\GitHub\reg\ajaxfw.php:115
+[03-Mar-2013 22:24:45] PHP   8. UserAjaxController->getSubscribers() D:\Projects\GitHub\reg\ajaxfw.php:115
+[03-Mar-2013 22:24:45] PHP   9. UserController->getSubscribersBase() D:\Projects\GitHub\reg\application\response\UserAjaxController.php:19
+[03-Mar-2013 22:24:45] PHP  10. Business\UserBusiness->getSubscribers() D:\Projects\GitHub\reg\application\controllers\UserController.php:29
+[03-Mar-2013 22:26:56] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Query\QueryException' with message 'SELECT u FROM Entities\User u WHERE u.id = :userid' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\QueryException.php:39
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(457): Doctrine\ORM\Query\QueryException::dqlError('SELECT u FROM E...')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(720): Doctrine\ORM\Query\Parser->semanticalError('Class Entities\...', Array)
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(262): Doctrine\ORM\Query\Parser->processDeferredPathExpressions(Object(Doctrine\ORM\Query\AST\SelectStatement))
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(330): Doctrine\ORM\Query\Parser->getAST()
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query.php(233): Doctrine\ORM\Query\Parser->parse()
+#5 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query.php(24 in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\QueryException.php on line 49
+[03-Mar-2013 22:35:33] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Query\QueryException' with message 'SELECT r FROM Entities\Region r WHERE r.CountryCode = :countryCode' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\QueryException.php:39
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(457): Doctrine\ORM\Query\QueryException::dqlError('SELECT r FROM E...')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(720): Doctrine\ORM\Query\Parser->semanticalError('Class Entities\...', Array)
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(262): Doctrine\ORM\Query\Parser->processDeferredPathExpressions(Object(Doctrine\ORM\Query\AST\SelectStatement))
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(330): Doctrine\ORM\Query\Parser->getAST()
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query.php(233): Doctrine\ORM\Query\Parser->parse()
+#5 D:\Projects\GitHub\reg\application\libraries\Doctrine\ in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\QueryException.php on line 49
+[03-Mar-2013 22:35:55] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Query\QueryException' with message 'SELECT r FROM Entities\Region r WHERE r.CountryCode = :countryCode' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\QueryException.php:39
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(457): Doctrine\ORM\Query\QueryException::dqlError('SELECT r FROM E...')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(720): Doctrine\ORM\Query\Parser->semanticalError('Class Entities\...', Array)
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(262): Doctrine\ORM\Query\Parser->processDeferredPathExpressions(Object(Doctrine\ORM\Query\AST\SelectStatement))
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(330): Doctrine\ORM\Query\Parser->getAST()
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query.php(233): Doctrine\ORM\Query\Parser->parse()
+#5 D:\Projects\GitHub\reg\application\libraries\Doctrine\ in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\QueryException.php on line 49
+[03-Mar-2013 22:45:54] PHP Fatal error:  Uncaught exception 'Doctrine\ORM\Query\QueryException' with message 'SELECT r FROM Entities\Region r WHERE r.CountryCode = :countryCode' in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\QueryException.php:39
+Stack trace:
+#0 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(457): Doctrine\ORM\Query\QueryException::dqlError('SELECT r FROM E...')
+#1 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(720): Doctrine\ORM\Query\Parser->semanticalError('Class Entities\...', Array)
+#2 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(262): Doctrine\ORM\Query\Parser->processDeferredPathExpressions(Object(Doctrine\ORM\Query\AST\SelectStatement))
+#3 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\Parser.php(330): Doctrine\ORM\Query\Parser->getAST()
+#4 D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query.php(233): Doctrine\ORM\Query\Parser->parse()
+#5 D:\Projects\GitHub\reg\application\libraries\Doctrine\ in D:\Projects\GitHub\reg\application\libraries\Doctrine\ORM\Query\QueryException.php on line 49
+[03-Mar-2013 23:10:46] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Projects\GitHub\reg\application\libraries\Business\BusinessBase.php on line 41
+[03-Mar-2013 23:10:46] PHP Stack trace:
+[03-Mar-2013 23:10:46] PHP   1. {main}() D:\Projects\GitHub\reg\index.php:0
+[03-Mar-2013 23:10:46] PHP   2. require_once() D:\Projects\GitHub\reg\index.php:202
+[03-Mar-2013 23:10:46] PHP   3. call_user_func_array() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[03-Mar-2013 23:10:46] PHP   4. UserController->Profile() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[03-Mar-2013 23:10:46] PHP   5. UserController->showProfileEditFormBase() D:\Projects\GitHub\reg\application\controllers\UserController.php:92
+[03-Mar-2013 23:10:46] PHP   6. Business\UserBusiness->getProfileRightMode() D:\Projects\GitHub\reg\application\controllers\UserController.php:46
+[03-Mar-2013 23:10:46] PHP   7. Business\BusinessBase->isUserConnected() D:\Projects\GitHub\reg\application\libraries\Business\UserBusiness.php:114
+[03-Mar-2013 23:11:08] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Projects\GitHub\reg\application\libraries\Business\BusinessBase.php on line 41
+[03-Mar-2013 23:11:08] PHP Stack trace:
+[03-Mar-2013 23:11:08] PHP   1. {main}() D:\Projects\GitHub\reg\index.php:0
+[03-Mar-2013 23:11:08] PHP   2. require_once() D:\Projects\GitHub\reg\index.php:202
+[03-Mar-2013 23:11:08] PHP   3. call_user_func_array() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[03-Mar-2013 23:11:08] PHP   4. UserController->Profile() D:\Projects\GitHub\reg\system\core\CodeIgniter.php:359
+[03-Mar-2013 23:11:08] PHP   5. UserController->showProfileEditFormBase() D:\Projects\GitHub\reg\application\controllers\UserController.php:92
+[03-Mar-2013 23:11:08] PHP   6. Business\UserBusiness->getProfileRightMode() D:\Projects\GitHub\reg\application\controllers\UserController.php:46
+[03-Mar-2013 23:11:08] PHP   7. Business\BusinessBase->isUserConnected() D:\Projects\GitHub\reg\application\libraries\Business\UserBusiness.php:114

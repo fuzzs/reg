@@ -17,7 +17,7 @@ class Region
     
      /**
      * @ManyToOne(targetEntity="Country")
-     * @JoinColumn(name="CountryCode", referencedColumnName="Code")
+     * @JoinColumn(name="CountryCode", referencedColumnName="Code", nullable=false)
      */
     protected $Country;
     
@@ -25,6 +25,31 @@ class Region
      * @Column(type="string", length=250, unique=false, nullable=false)
      */
     protected $RegionName;
+    
+    /**
+     * @Column(type="string", length=250, unique=false, nullable=true)
+     */
+    protected $RegionAltName;
+    
+    /**
+     * @return int
+     */
+    public function getId() { return $this->Id; }
+    
+    /**
+     * @return Country
+     */
+    public function getCountry() { return $this->Country; }
+    
+    /**
+     * @return string
+     */
+    public function getRegionName() { return $this->RegionName; }
+    
+    /**
+     * @return string
+     */
+    public function getRegionAltName() { return $this->RegionAltName; }
 
 }
 

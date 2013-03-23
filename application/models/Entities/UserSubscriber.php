@@ -6,7 +6,7 @@ namespace Entities;
  * @Entity
  * @Table(name="usr_usersubscriptions")
  */
-class UserSubscription
+class UserSubscriber
 {
     /**
      * @Id
@@ -22,8 +22,24 @@ class UserSubscription
     protected $User;
     
     /**
+     * @ManyToOne(targetEntity="User")
+     * @JoinColumn(name="UserToId", referencedColumnName="Id")
+     */
+    protected $UserTo;
+    
+    /**
      * @OneToMany(targetEntity="User", mappedBy="User")
      */
-    protected $UserSubscriptions;
+    protected $UserSubscribers;
+    
+    /**
+     * @return User
+     */
+    public function getUser() { return $this->User; }
+    
+    /**
+     * @return User
+     */
+    public function getUserTo() { return $this->UserTo; }
 }
 ?>

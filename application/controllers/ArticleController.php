@@ -5,9 +5,15 @@
  */
 class ArticleController extends RegloController
 {
-    /* @var $articleBusiness Business\ArticleBusiness */
+    /** 
+     * Business class instance for articles
+     * @var Business\ArticleBusiness 
+     */
     protected $articleBusiness;
-    /* @var $numRec integer */
+    
+    /**
+     * @var integer 
+     */
     protected $numRec = 30;
     
     public function __construct() 
@@ -36,7 +42,6 @@ class ArticleController extends RegloController
         
         //$article = $this->articleBusiness->getArticleByID(1);
         
-        $data['test'] = sha1('bonjour');
         //$data['test'] = APPPATH;
         //$this->load->template('ArticleMainView', $data);
         
@@ -130,6 +135,7 @@ class ArticleController extends RegloController
     protected function getEditArticleFormBase($articleId = null)
     {
         $hasError = false;
+        /** @var Business\RegloTransport */
         $ret = new \Business\RegloTransport();
         
         //TODO: get dossier list

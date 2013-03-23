@@ -13,7 +13,7 @@ use Doctrine\Common\ClassLoader,
  */
 class ArticleBusiness extends BusinessBase
 {
-    /* @var $em EntityManager */
+    /** @var EntityManager */
     protected $em;
 
     /**
@@ -34,10 +34,13 @@ class ArticleBusiness extends BusinessBase
      */
     public function getAllArticles($start, $numRec)
     {
+        /* @var $query \Doctrine\ORM\Query */
         /* @var $ret RegloTransport */
+        /* @var $retArticle \Entities\Article */
         $ret = new RegloTransport();
         
         $dql = "SELECT ar FROM Entities\Article ar";
+        
         $query = $this->em->createQuery($dql)
                 ->setFirstResult($start)
                 ->setMaxResults($numRec);
@@ -64,6 +67,8 @@ class ArticleBusiness extends BusinessBase
      */
     public function getArticleByID($articleID)
     {
+        /* @var $ret RegloTransport */
+        /* @var $retArticle \Entities\Article */
         $ret = new RegloTransport();
         $retArticle = $this->em->find("Entities\Article", $articleID);
         if ($retArticle != null)
@@ -88,22 +93,34 @@ class ArticleBusiness extends BusinessBase
      */
     public function addComment($articleID, $commentText)
     {
+        /* @var $query \Doctrine\ORM\Query */
+        /* @var $ret RegloTransport */
+        /* @var $retArticle \Entities\Article */
         //TODO: check user rights
         $ret = new RegloTransport();
         
-        $retArticle = $this->getArticleByID($articleID);
         
-        if (!$retArticle->HasError)
+        if ($this->userCanAddComments($articleID))
         {
-            $comment = new \Entities\ArticleComment();
-            $comment->createComment($retArticle->Data, $this->currentUser, $commentText);
-            $retArticle->Data->getComments()->add($comment);
-            
-            $this->em->persist($comment);
-            $this->em->persist($retArticle->Data);
-            $this->em->flush();
-            $ret->HasError = false;
-            $ret->Message = "OK";
+        
+            $retArticle = $this->em->find("Entities\Article", $articleID);
+
+            if ($retArticle != null)
+            {
+                $comment = new \Entities\ArticleComment();
+                $comment->createComment($retArticle->Data, $this->currentUser, $commentText);
+                $retArticle->getComments()->add($comment);
+
+                $this->em->persist($comment);
+                $this->em->persist($retArticle);
+                $this->em->flush();
+                $ret->HasError = false;
+                $ret->Message = "OK";
+            }
+        }
+        else
+        {
+            $ret->HasError = true;
         }
         
         return $ret;
@@ -131,12 +148,10 @@ class ArticleBusiness extends BusinessBase
         return $ret;
     }
     
-    public function saveArticle($articleId, $articleTitle, $articleContent)
+    public function saveArticle($articleID, $articleTitle, $articleContent)
     {
-        $retArticle = $this->getArticleByID($articleId);
-        
-        /* var $article \Entities\Article */
-        $article = $retArticle->Data;
+        /* @var $article \Entities\Article */
+        $article = $this->em->find("Entities\Article", $articleID);
         
         $article->updateArticle($articleTitle, $articleContent);
         
@@ -157,9 +172,14 @@ class ArticleBusiness extends BusinessBase
      * @param int $articleId
      * @return boolean
      */
-    public function userCanSaveArticle($articleId = null)
+    public function userCanSaveArticle($articleID = null)
     {
-        return $true;
+        return true;
+    }
+    
+    public function userCanAddComments($articleID = null)
+    {
+        return true;
     }
 }
 

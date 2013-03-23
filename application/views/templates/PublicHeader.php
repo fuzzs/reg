@@ -20,6 +20,7 @@
         <script src="/js/article.class.js"></script>
         <script src="/js/artselector.class.js"></script>
         <script src="/js/commentor.class.js"></script>
+        <script src="/js/user.class.js"></script>
         <script src="/js/jquery.movingboxes.js"></script>
         
     </head>
@@ -30,8 +31,8 @@
     </div>
     <div class="regloMenuBar">
         <div class="regloMenu">
-            <div class="regloMenuItem">Profile</div>
-            <div class="regloMenuItem">Articles</div>
+            <div class="regloMenuItem"><a href="/index.php/profile/">Profile</a></div>
+            <div class="regloMenuItem"><a href="/index.php/article/">Articles</a></div>
             <div class="regloMenuItem">Dossiers</div>
             <div class="regloMenuItem">Organisations</div>
         </div>

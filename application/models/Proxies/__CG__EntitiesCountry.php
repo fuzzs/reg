@@ -42,10 +42,34 @@ class Country extends \Entities\Country implements \Doctrine\ORM\Proxy\Proxy
     }
 
     
+    public function getCode()
+    {
+        $this->__load();
+        return parent::getCode();
+    }
+
+    public function getCountryName()
+    {
+        $this->__load();
+        return parent::getCountryName();
+    }
+
+    public function getCountryAltName()
+    {
+        $this->__load();
+        return parent::getCountryAltName();
+    }
+
+    public function getRegions()
+    {
+        $this->__load();
+        return parent::getRegions();
+    }
+
 
     public function __sleep()
     {
-        return array('__isInitialized__', 'Code', 'CountryName', 'Regions');
+        return array('__isInitialized__', 'Code', 'CountryName', 'CountryAltName', 'Regions');
     }
 
     public function __clone()
